@@ -172,13 +172,14 @@ a {
   width: var(--wrap);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.78fr);
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
-  padding: clamp(3.1rem, 7vw, 6.5rem) 0 clamp(2rem, 5vw, 4.5rem);
+  gap: clamp(1.75rem, 4vw, 4.2rem);
+  padding: clamp(2.6rem, 6vw, 5.8rem) 0 clamp(1.8rem, 4.5vw, 4rem);
 }
 
 .hero-copy {
+  min-width: 0;
   max-width: 740px;
 }
 
@@ -194,15 +195,15 @@ a {
 .hero h1 {
   max-width: 760px;
   margin-bottom: 1rem;
-  font-size: clamp(3.4rem, 8.6vw, 7.7rem);
+  font-size: clamp(3rem, 7.6vw, 6.8rem);
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 .hero-lede {
   max-width: 650px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.55rem;
   color: var(--ink-soft);
   font-size: clamp(1.05rem, 2vw, 1.25rem);
 }
@@ -259,15 +260,15 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.85rem;
-  margin-top: 2rem;
+  margin-top: 1.55rem;
 }
 
 .hero-stats article {
-  min-height: 112px;
+  min-height: 96px;
   border: 1px solid rgba(220, 230, 226, 0.95);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
-  padding: 1rem;
+  padding: 0.9rem;
   box-shadow: 0 10px 26px rgba(16, 20, 24, 0.05);
 }
 
@@ -288,6 +289,7 @@ a {
 
 .hero-portrait {
   position: relative;
+  min-width: 0;
   display: grid;
   gap: 1rem;
 }
@@ -295,18 +297,18 @@ a {
 .hero-portrait::before {
   content: "";
   position: absolute;
-  inset: 1.2rem -0.9rem 4.2rem 1.35rem;
+  inset: 1rem -0.55rem 3.4rem 1rem;
   z-index: -1;
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(16, 20, 24, 0.96), rgba(0, 140, 114, 0.9)),
     repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 14px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .profile-stack {
   position: relative;
-  width: min(100%, 392px);
+  width: min(100%, 420px);
   justify-self: end;
   isolation: isolate;
 }
@@ -314,9 +316,9 @@ a {
 .portrait-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
-  border: 9px solid white;
+  border: 7px solid white;
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(0, 140, 114, 0.14), rgba(47, 111, 235, 0.18)),
@@ -337,11 +339,8 @@ a {
 .profile-photo {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  padding: 0.65rem;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.92), rgba(237, 245, 242, 0.64) 48%, rgba(16, 20, 24, 0.16));
 }
 
 .profile-chip {
@@ -352,7 +351,7 @@ a {
   border: 1px solid rgba(220, 230, 226, 0.95);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.94);
-  padding: 0.82rem 0.95rem;
+  padding: 0.72rem 0.8rem;
   box-shadow: var(--shadow-sm);
 }
 
@@ -383,9 +382,9 @@ a {
 }
 
 .hero-portrait figcaption {
-  width: min(100%, 360px);
+  width: min(100%, 380px);
   justify-self: start;
-  margin-top: -3.8rem;
+  margin-top: -1.4rem;
   border: 1px solid rgba(220, 230, 226, 0.95);
   border-left: 6px solid var(--coral);
   border-radius: 8px;
@@ -744,11 +743,11 @@ footer {
   }
 
   .hero {
-    gap: 2.4rem;
+    gap: 2rem;
   }
 
   .profile-stack {
-    width: min(100%, 392px);
+    width: min(100%, 430px);
     justify-self: start;
   }
 
@@ -772,7 +771,7 @@ footer {
 
 @media (max-width: 720px) {
   :root {
-    --wrap: min(100% - 24px, 1140px);
+    --wrap: min(1140px, calc(100% - 32px));
   }
 
   .navbar {
@@ -785,8 +784,8 @@ footer {
   .nav-links {
     width: 100%;
     order: 3;
-    justify-content: space-between;
-    gap: 0.35rem;
+    justify-content: flex-start;
+    gap: clamp(0.9rem, 6vw, 1.55rem);
   }
 
   .nav-links a {
@@ -794,11 +793,36 @@ footer {
   }
 
   .nav-cta {
-    min-height: 38px;
+    display: none;
+  }
+
+  .hero {
+    gap: 1.35rem;
+    padding: 2rem 0 1.4rem;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.6rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.1rem, 19vw, 5rem);
+    margin-bottom: 0.75rem;
+    font-size: clamp(2.35rem, 11vw, 3.1rem);
+    line-height: 1;
+  }
+
+  .hero-lede {
+    margin-bottom: 1.1rem;
+    font-size: 0.98rem;
+    overflow-wrap: break-word;
+  }
+
+  .hero-actions {
+    gap: 0.65rem;
   }
 
   .hero-actions,
@@ -809,48 +833,78 @@ footer {
 
   .btn {
     width: 100%;
+    min-height: 46px;
+    padding: 0.78rem 1rem;
   }
 
-  .hero-stats,
   .proof-strip,
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 1.1rem;
+  }
+
   .hero-stats article {
-    min-height: auto;
+    min-height: 92px;
+    padding: 0.72rem 0.55rem;
+  }
+
+  .hero-stats strong {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats span {
+    font-size: 0.72rem;
+    line-height: 1.25;
   }
 
   .hero-portrait::before {
-    inset: 1.2rem -0.45rem 6.2rem 0.9rem;
+    display: none;
   }
 
   .profile-stack {
     display: grid;
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
     justify-self: center;
-    width: min(100%, 360px);
+    width: min(100%, 320px);
+  }
+
+  .portrait-frame {
+    grid-column: 1 / -1;
+    border-width: 5px;
+    box-shadow: var(--shadow-sm);
   }
 
   .profile-chip {
     position: static;
-    width: min(100%, 250px);
+    width: 100%;
+    padding: 0.65rem 0.7rem;
+  }
+
+  .profile-chip strong {
+    font-size: 0.82rem;
   }
 
   .profile-chip-top {
-    justify-self: start;
-    margin-top: -1.15rem;
+    justify-self: stretch;
+    margin-top: 0;
   }
 
   .profile-chip-bottom {
-    justify-self: end;
-    margin-top: -0.35rem;
+    justify-self: stretch;
+    margin-top: 0;
   }
 
   .hero-portrait figcaption {
-    width: min(100%, 330px);
+    width: min(100%, 320px);
     justify-self: center;
     margin-top: 0;
+    padding: 0.85rem;
   }
 
   .proof-strip p,
