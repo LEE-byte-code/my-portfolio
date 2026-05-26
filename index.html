@@ -8,215 +8,252 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body class="min-h-screen overflow-x-hidden bg-[#f6f5ef] text-[#101418] antialiased">
+  <a class="fixed left-4 top-4 z-50 -translate-y-24 rounded-md bg-[#101418] px-4 py-3 text-sm font-extrabold text-white shadow-lg transition focus:translate-y-0" href="#main">
+    Skip to content
+  </a>
 
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="#main" class="nav-logo" aria-label="Leon Mwangi home">
-        <span>LM</span>
-        Leon Mwangi
+  <header class="sticky top-0 z-40 border-b border-[#101418]/10 bg-[#f6f5ef]/90 backdrop-blur-xl">
+    <nav class="mx-auto flex min-h-20 max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <a href="#main" class="inline-flex min-w-0 items-center gap-3 font-black tracking-normal text-[#101418]" aria-label="Leon Mwangi home">
+        <span class="grid size-10 shrink-0 place-items-center rounded-md bg-[#101418] text-sm text-white shadow-sm">LM</span>
+        <span class="truncate">Leon Mwangi</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+      <ul class="order-3 flex w-full items-center gap-5 overflow-x-auto text-sm font-extrabold text-[#58645f] sm:w-auto sm:justify-center md:order-none">
+        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#about">About</a></li>
+        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#skills">Skills</a></li>
+        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#projects">Projects</a></li>
+        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#contact">Contact</a></li>
       </ul>
-      <a class="nav-cta" href="mailto:leonmwangi595@gmail.com">Email</a>
+
+      <a class="hidden min-h-10 items-center justify-center rounded-md border border-[#101418] px-4 text-sm font-black text-[#101418] transition hover:bg-[#101418] hover:text-white sm:inline-flex" href="mailto:leonmwangi595@gmail.com">
+        Email me
+      </a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Web developer in Nairobi, Kenya</p>
-        <h1 id="hero-title">Leon Mwangi</h1>
-        <p class="hero-lede">
-          I build clean, responsive websites with strong structure, smooth layouts, and
-          the kind of polish that makes a first impression feel intentional.
-        </p>
-        <div class="hero-actions" aria-label="Primary actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="mailto:leonmwangi595@gmail.com" class="btn btn-secondary">Start a Conversation</a>
-        </div>
-        <div class="hero-stats" aria-label="Portfolio highlights">
-          <article>
-            <strong>HTML</strong>
-            <span>Semantic foundations</span>
-          </article>
-          <article>
-            <strong>CSS</strong>
-            <span>Responsive interfaces</span>
-          </article>
-          <article>
-            <strong>JS</strong>
-            <span>Growing interactivity</span>
-          </article>
-        </div>
-      </div>
+    <section class="relative isolate overflow-hidden border-b border-[#101418]/10 bg-[linear-gradient(180deg,#f7f5ee_0%,#ffffff_58%,#edf5f2_100%)]" aria-labelledby="hero-title">
+      <div class="absolute inset-0 -z-10 opacity-70 [background-image:linear-gradient(rgba(16,20,24,.055)_1px,transparent_1px),linear-gradient(90deg,rgba(0,140,114,.055)_1px,transparent_1px)] [background-size:72px_72px]" aria-hidden="true"></div>
 
-      <figure class="hero-portrait">
-        <div class="profile-stack">
-          <div class="portrait-frame">
-            <img src="images/profile.jpg" alt="Leon Mwangi profile image" class="profile-photo">
-          </div>
-          <div class="profile-chip profile-chip-top">
-            <span>Based in</span>
-            <strong>Nairobi</strong>
-          </div>
-          <div class="profile-chip profile-chip-bottom">
-            <span>Building</span>
-            <strong>Responsive Web</strong>
-          </div>
-        </div>
-        <figcaption>
-          <span>Available for web projects</span>
-          <strong>Frontend foundations, visual polish, and practical builds.</strong>
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="proof-strip" aria-label="Portfolio focus areas">
-      <p>Responsive layouts</p>
-      <p>Accessible markup</p>
-      <p>Clean visual systems</p>
-      <p>Project-ready habits</p>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="section-heading">
-        <p class="eyebrow">About me</p>
-        <h2>Curious, practical, and serious about getting better with every build.</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>
-            Hello, I am Leon Mwangi, a web developer based in Nairobi. I enjoy turning
-            ideas into websites that are clear, easy to use, and polished across screens.
+      <div class="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl grid-cols-1 items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-20">
+        <div class="w-full min-w-0 max-w-[min(22rem,calc(100vw-2rem))] sm:max-w-3xl">
+          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">Web developer in Nairobi, Kenya</p>
+          <h1 id="hero-title" class="max-w-4xl text-5xl font-black leading-[.95] tracking-normal text-[#101418] sm:text-6xl lg:text-8xl">
+            Leon Mwangi
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-[#33413c] sm:text-xl">
+            I build clean, responsive websites with strong structure, smooth layouts, and the polish that makes a first impression feel intentional.
           </p>
-          <p>
-            I am growing through hands-on projects and building a strong foundation in
-            frontend development. My goal is to become a full-stack developer who can
-            design, build, and ship useful web applications.
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="inline-flex min-h-12 items-center justify-center rounded-md bg-[#008c72] px-5 font-black text-white shadow-[0_18px_36px_rgba(0,140,114,.24)] transition hover:-translate-y-0.5 hover:bg-[#006451]" href="#projects">
+              View projects
+            </a>
+            <a class="inline-flex min-h-12 items-center justify-center rounded-md border border-[#101418]/15 bg-white/75 px-5 font-black text-[#101418] shadow-sm transition hover:-translate-y-0.5 hover:border-[#101418] hover:bg-white" href="mailto:leonmwangi595@gmail.com">
+              Start a conversation
+            </a>
+          </div>
+
+          <dl class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div class="rounded-lg border border-[#101418]/10 bg-white/80 p-4 shadow-sm">
+              <dt class="text-2xl font-black leading-none text-[#101418]">HTML</dt>
+              <dd class="mt-2 text-xs font-bold leading-5 text-[#64706d] sm:text-sm">Semantic foundations</dd>
+            </div>
+            <div class="rounded-lg border border-[#101418]/10 bg-white/80 p-4 shadow-sm">
+              <dt class="text-2xl font-black leading-none text-[#101418]">CSS</dt>
+              <dd class="mt-2 text-xs font-bold leading-5 text-[#64706d] sm:text-sm">Responsive interfaces</dd>
+            </div>
+            <div class="rounded-lg border border-[#101418]/10 bg-white/80 p-4 shadow-sm">
+              <dt class="text-2xl font-black leading-none text-[#101418]">JS</dt>
+              <dd class="mt-2 text-xs font-bold leading-5 text-[#64706d] sm:text-sm">Growing interactivity</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="relative grid w-full min-w-0 max-w-[min(22rem,calc(100vw-2rem))] justify-self-start gap-4 sm:mx-auto sm:max-w-md sm:justify-self-center lg:ml-auto lg:justify-self-end" aria-label="Portfolio visual">
+          <div class="absolute -left-4 top-8 hidden h-28 w-28 rounded-lg border-l-4 border-t-4 border-[#ff6b4a] sm:block" aria-hidden="true"></div>
+          <div class="relative overflow-hidden rounded-lg border-[6px] border-white bg-[#101418] shadow-[0_32px_90px_rgba(16,20,24,.2)]">
+            <img class="aspect-[4/5] h-full w-full object-cover" src="images/jon-tyson-6RcT6zEmm9A-unsplash.jpg" alt="Red and yellow storefront sign used as a bold portfolio visual">
+            <div class="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(16,20,24,.82))] p-5 text-white">
+              <p class="text-xs font-black uppercase tracking-[.16em] text-[#f2b84b]">Available for web projects</p>
+              <p class="mt-2 max-w-sm text-lg font-black leading-tight">Frontend foundations, visual polish, and practical builds.</p>
+            </div>
+          </div>
+          <figcaption class="grid grid-cols-1 gap-3 min-[440px]:grid-cols-2">
+            <span class="rounded-lg border border-[#101418]/10 bg-white p-4 text-sm font-black shadow-sm">
+              <span class="block text-xs uppercase tracking-[.14em] text-[#00715d]">Based in</span>
+              Nairobi
+            </span>
+            <span class="rounded-lg border border-[#101418]/10 bg-white p-4 text-sm font-black shadow-sm">
+              <span class="block text-xs uppercase tracking-[.14em] text-[#00715d]">Building</span>
+              Responsive Web
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="border-b border-[#101418]/10 bg-[#101418] text-white" aria-label="Portfolio focus areas">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <p class="border-r border-white/10 py-5 text-center text-sm font-black text-white/80">Responsive layouts</p>
+        <p class="border-r-0 border-white/10 py-5 text-center text-sm font-black text-white/80 lg:border-r">Accessible markup</p>
+        <p class="border-r border-t border-white/10 py-5 text-center text-sm font-black text-white/80 lg:border-t-0">Clean visual systems</p>
+        <p class="border-t border-white/10 py-5 text-center text-sm font-black text-[#f2b84b] lg:border-t-0">Project-ready habits</p>
+      </div>
+    </section>
+
+    <section id="about" class="border-b border-[#101418]/10 bg-white">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.95fr_1.05fr] lg:px-8 lg:py-28">
+        <div>
+          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">About me</p>
+          <h2 class="max-w-3xl text-4xl font-black leading-tight tracking-normal text-[#101418] sm:text-5xl">
+            Curious, practical, and serious about improving with every build.
+          </h2>
+        </div>
+
+        <div class="grid gap-8">
+          <div class="space-y-5 text-lg leading-8 text-[#33413c]">
+            <p>
+              Hello, I am Leon Mwangi, a web developer based in Nairobi. I enjoy turning ideas into websites that are clear, easy to use, and polished across screens.
+            </p>
+            <p>
+              I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
+            </p>
+            <a href="mailto:leonmwangi595@gmail.com?subject=CV%20Request" class="inline-flex border-b-2 border-current font-black text-[#006451] transition hover:text-[#ff6b4a]">
+              Request CV
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 gap-3">
+            <article class="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-[#101418]/10 bg-[#f6f5ef] p-5">
+              <span class="grid size-11 place-items-center rounded-md bg-[#e5f3ef] text-xs font-black tracking-[.12em] text-[#006451]">01</span>
+              <div>
+                <h3 class="text-lg font-black text-[#101418]">Structure</h3>
+                <p class="mt-1 leading-7 text-[#64706d]">Semantic HTML, clear content flow, and accessible page foundations.</p>
+              </div>
+            </article>
+            <article class="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-[#101418]/10 bg-[#f6f5ef] p-5">
+              <span class="grid size-11 place-items-center rounded-md bg-[#e8efff] text-xs font-black tracking-[.12em] text-[#2f6feb]">02</span>
+              <div>
+                <h3 class="text-lg font-black text-[#101418]">Interface</h3>
+                <p class="mt-1 leading-7 text-[#64706d]">CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
+              </div>
+            </article>
+            <article class="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-[#101418]/10 bg-[#f6f5ef] p-5">
+              <span class="grid size-11 place-items-center rounded-md bg-[#fff1d6] text-xs font-black tracking-[.12em] text-[#8a5b00]">03</span>
+              <div>
+                <h3 class="text-lg font-black text-[#101418]">Momentum</h3>
+                <p class="mt-1 leading-7 text-[#64706d]">Consistent practice, GitHub publishing, and improving through feedback.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="bg-[#f6f5ef]">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">Skills</p>
+          <h2 class="text-4xl font-black leading-tight tracking-normal text-[#101418] sm:text-5xl">
+            The tools I am using to build sharper digital experiences.
+          </h2>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#008c72]/40 hover:shadow-lg">
+            <p class="text-xs font-black uppercase tracking-[.16em] text-[#00715d]">HTML</p>
+            <h3 class="mt-8 text-2xl font-black text-[#101418]">HTML5</h3>
+            <p class="mt-3 leading-7 text-[#64706d]">Semantic structure, accessible content, forms, links, and maintainable page foundations.</p>
+          </article>
+          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#2f6feb]/40 hover:shadow-lg">
+            <p class="text-xs font-black uppercase tracking-[.16em] text-[#2f6feb]">CSS</p>
+            <h3 class="mt-8 text-2xl font-black text-[#101418]">CSS3</h3>
+            <p class="mt-3 leading-7 text-[#64706d]">Responsive layouts, visual hierarchy, animations, Grid, Flexbox, and polished UI details.</p>
+          </article>
+          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ff6b4a]/40 hover:shadow-lg">
+            <p class="text-xs font-black uppercase tracking-[.16em] text-[#d84f33]">JS</p>
+            <h3 class="mt-8 text-2xl font-black text-[#101418]">JavaScript</h3>
+            <p class="mt-3 leading-7 text-[#64706d]">Browser fundamentals, interactivity, DOM updates, and problem-solving practice.</p>
+          </article>
+          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#f2b84b]/60 hover:shadow-lg">
+            <p class="text-xs font-black uppercase tracking-[.16em] text-[#8a5b00]">Git</p>
+            <h3 class="mt-8 text-2xl font-black text-[#101418]">GitHub</h3>
+            <p class="mt-3 leading-7 text-[#64706d]">Version control, project publishing, portfolio hosting, and sharing progress online.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="border-y border-[#101418]/10 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">Projects</p>
+          <h2 class="text-4xl font-black leading-tight tracking-normal text-[#101418] sm:text-5xl">
+            Recent work built with focus, clarity, and a growing frontend toolkit.
+          </h2>
+        </div>
+
+        <article class="mt-10 grid grid-cols-1 overflow-hidden rounded-lg border border-[#101418]/10 bg-[#101418] shadow-[0_28px_80px_rgba(16,20,24,.14)] transition hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(16,20,24,.18)] lg:grid-cols-[.88fr_1.12fr]">
+          <div class="relative min-h-80 overflow-hidden bg-[#101418] p-5 text-white">
+            <img class="absolute inset-0 h-full w-full object-cover opacity-32" src="images/profile.jpg" alt="Portfolio avatar graphic">
+            <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(16,20,24,.94),rgba(0,100,81,.82))]" aria-hidden="true"></div>
+            <div class="relative flex h-full min-h-72 flex-col justify-between">
+              <div class="flex gap-2" aria-hidden="true">
+                <span class="size-3 rounded-full bg-[#ff6b4a]"></span>
+                <span class="size-3 rounded-full bg-[#f2b84b]"></span>
+                <span class="size-3 rounded-full bg-[#008c72]"></span>
+              </div>
+              <div class="grid grid-cols-[1.35fr_.8fr] grid-rows-2 gap-3" aria-hidden="true">
+                <span class="row-span-2 rounded-lg border border-white/15 bg-white/10"></span>
+                <span class="rounded-lg border border-white/15 bg-white/10"></span>
+                <span class="rounded-lg border border-white/15 bg-white/10"></span>
+              </div>
+              <p class="max-w-sm text-5xl font-black leading-none tracking-normal sm:text-6xl">Portfolio</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-7 sm:p-10 lg:p-12">
+            <p class="text-xs font-black uppercase tracking-[.16em] text-[#00715d]">Featured build</p>
+            <h3 class="mt-4 text-3xl font-black leading-tight tracking-normal text-[#101418] sm:text-4xl">Personal Portfolio Website</h3>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-[#64706d]">
+              A responsive portfolio built with HTML, CSS, and Tailwind to introduce my profile, skills, projects, and contact details with a polished visual direction.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+              <span class="rounded-md bg-[#edf5f2] px-3 py-2 text-xs font-black uppercase tracking-[.08em] text-[#006451]">HTML</span>
+              <span class="rounded-md bg-[#e8efff] px-3 py-2 text-xs font-black uppercase tracking-[.08em] text-[#2f6feb]">Tailwind</span>
+              <span class="rounded-md bg-[#fff1d6] px-3 py-2 text-xs font-black uppercase tracking-[.08em] text-[#8a5b00]">Responsive</span>
+            </div>
+            <a href="mailto:leonmwangi595@gmail.com?subject=Portfolio%20Project%20Link" class="mt-7 inline-flex border-b-2 border-current font-black text-[#006451] transition hover:text-[#ff6b4a]">
+              Request project link
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-[#101418] text-white" aria-labelledby="contact-title">
+      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-16 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#f2b84b]">Contact</p>
+          <h2 id="contact-title" class="text-4xl font-black leading-tight tracking-normal sm:text-5xl">Have an opportunity or idea?</h2>
+          <p class="mt-5 text-lg leading-8 text-white/75">
+            I am open to internships, collaborations, freelance practice projects, and conversations about building better websites.
           </p>
-          <a href="mailto:leonmwangi595@gmail.com?subject=CV%20Request" class="text-link">Request CV</a>
         </div>
-
-        <div class="focus-list" aria-label="Current focus">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Structure</h3>
-              <p>Semantic HTML, clear content flow, and accessible page foundations.</p>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Interface</h3>
-              <p>CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
-            </div>
-          </article>
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Momentum</h3>
-              <p>Consistent practice, GitHub publishing, and improving through feedback.</p>
-            </div>
-          </article>
-        </div>
+        <a href="mailto:leonmwangi595@gmail.com" class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-md bg-white px-5 font-black text-[#101418] transition hover:-translate-y-0.5 hover:bg-[#f2b84b]">
+          Say hi
+        </a>
       </div>
-    </section>
-
-    <section id="skills" class="section skills">
-      <div class="section-heading">
-        <p class="eyebrow">Skills</p>
-        <h2>The tools I am using to build sharper digital experiences.</h2>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <span class="skill-tag">HTML</span>
-          <h3>HTML5</h3>
-          <p>Semantic structure, accessible content, forms, links, and maintainable page foundations.</p>
-        </article>
-        <article class="skill-card">
-          <span class="skill-tag">CSS</span>
-          <h3>CSS3</h3>
-          <p>Responsive layouts, visual hierarchy, animations, Grid, Flexbox, and polished UI details.</p>
-        </article>
-        <article class="skill-card">
-          <span class="skill-tag">JS</span>
-          <h3>JavaScript</h3>
-          <p>Browser fundamentals, interactivity, DOM updates, and problem-solving practice.</p>
-        </article>
-        <article class="skill-card">
-          <span class="skill-tag">Git</span>
-          <h3>GitHub</h3>
-          <p>Version control, project publishing, portfolio hosting, and sharing progress online.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Recent work built with focus, clarity, and a growing frontend toolkit.</h2>
-      </div>
-
-      <article class="project-card">
-        <div class="project-preview" aria-hidden="true">
-          <div class="browser-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="preview-grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p>Portfolio</p>
-        </div>
-
-        <div class="project-info">
-          <p class="project-kicker">Featured build</p>
-          <h3>Personal Portfolio Website</h3>
-          <p>
-            A responsive portfolio built with HTML and CSS to introduce my profile,
-            skills, projects, and contact details with a polished visual direction.
-          </p>
-          <div class="project-tags" aria-label="Technologies used">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Responsive</span>
-          </div>
-          <a href="mailto:leonmwangi595@gmail.com?subject=Portfolio%20Project%20Link" class="text-link">
-            Request Project Link
-          </a>
-        </div>
-      </article>
-    </section>
-
-    <section id="contact" class="contact" aria-labelledby="contact-title">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">Have an opportunity or idea?</h2>
-        <p>
-          I am open to internships, collaborations, freelance practice projects,
-          and conversations about building better websites.
-        </p>
-      </div>
-      <a href="mailto:leonmwangi595@gmail.com" class="btn btn-light">Say Hi</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="border-t border-[#101418]/10 bg-[#f6f5ef] px-4 py-6 text-center text-sm font-semibold text-[#64706d]">
     <p>Built by Leon Mwangi | 2026</p>
   </footer>
 </body>
