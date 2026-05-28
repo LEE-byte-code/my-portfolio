@@ -1,3 +1,4 @@
+
 /**
  * Leon Mwangi - Developer Portfolio Interactivity Scripts
  * Pure Vanilla JavaScript implementation of requested features.
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTopAndNavbarScroll();
   initThemeToggle();
   initProjectModals();
+  initSetupCopyFeature();
 });
 
 /**
@@ -414,7 +416,7 @@ function renderPortfolioBuilder() {
       </p>
 
       <div class="builder-section glass">
-        <h3 class="builder-section-title">Accent Accent Palette</h3>
+        <h3 class="builder-section-title">Accent Color Palette</h3>
         <div class="swatches-grid">
           <button class="color-swatch-btn ${activeColor.trim() === '#00bfa5' || activeColor === '' ? 'active' : ''}" data-accent="#00bfa5" data-accent-hover="#009688">
             <span class="swatch-circle" style="background-color: #00bfa5;"></span> Teal (Default)
@@ -810,5 +812,31 @@ function escapeHTML(str) {
       '"': '&quot;'
     }[tag] || tag)
   );
+}
+
+/**
+ * FEATURE 10: VS Code Extension Copy Command Feature
+ */
+function initSetupCopyFeature() {
+  const copyButtons = document.querySelectorAll('.setup-copy-btn');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const extId = btn.getAttribute('data-id');
+      const command = `code --install-extension ${extId}`;
+      
+      navigator.clipboard.writeText(command).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '📋 Copied!';
+        btn.classList.add('copied');
+        
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy command: ', err);
+      });
+    });
+  });
 }
 

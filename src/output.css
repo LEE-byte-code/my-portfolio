@@ -185,6 +185,9 @@
   .fixed {
     position: fixed;
   }
+  .static {
+    position: static;
+  }
   .top-4 {
     top: calc(var(--spacing) * 4);
   }

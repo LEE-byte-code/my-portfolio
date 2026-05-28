@@ -34,6 +34,7 @@
         <ul class="nav-links">
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#setup">Setup</a></li>
           <li><a class="nav-link" href="#projects">Projects</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -67,7 +68,6 @@
             Leon Mwangi
           </h1>
           <p class="hero-tagline">
-            AnI
             Am learning to build clean, responsive websites with strong structure, smooth layouts, and the polish that makes a first impression feel intentional.
           </p>
 
@@ -306,7 +306,12 @@
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">VS Code</h4>
-                <p class="skill-desc">IDE configuration, syntax extensions, debugging, terminal usage, and fast workflows.</p>
+                <p class="skill-desc">
+                  IDE configuration, terminal usage, and fast workflows. 
+                  <a href="#setup" class="skill-link" style="color: var(--color-primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.5rem;">
+                    See my Extensions 🔌
+                  </a>
+                </p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar skill-bar" data-width="85" aria-label="VS Code proficiency 85%"></div>
                 </div>
@@ -337,6 +342,92 @@
               </article>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VS Code Setup / Extensions Section -->
+    <section id="setup" aria-labelledby="setup-title">
+      <div class="container">
+        <div class="section-header fade-hidden">
+          <div class="section-label">My Environment</div>
+          <h2 id="setup-title" class="section-title">
+            My VS Code Powerpack
+          </h2>
+          <p class="section-subtitle">
+            The core extension suite I use to write clean code, format layouts, and boost my speed.
+          </p>
+        </div>
+
+        <div class="setup-grid stagger-container">
+          <!-- Card 1: Prettier -->
+          <article class="setup-card fade-hidden" style="--card-accent: var(--color-accent-yellow); --card-accent-opacity: rgba(242, 184, 75, 0.07);">
+            <div class="setup-card-inner">
+              <div class="setup-card-header">
+                <span class="setup-icon" aria-hidden="true">✨</span>
+                <span class="setup-pill">Formatting</span>
+              </div>
+              <h3 class="setup-name">Prettier</h3>
+              <p class="setup-desc">An opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules.</p>
+              <div class="setup-actions">
+                <div class="setup-meta">
+                  <code class="setup-id" title="Extension ID">esbenp.prettier-vscode</code>
+                  <button class="setup-copy-btn" data-id="esbenp.prettier-vscode" title="Copy installation command" aria-label="Copy installation command for Prettier">
+                    📋 Copy Command
+                  </button>
+                </div>
+                <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" rel="noopener noreferrer" class="setup-btn" aria-label="View Prettier on VS Code Marketplace">
+                  Marketplace 🔌
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Live Server -->
+          <article class="setup-card fade-hidden" style="--card-accent: var(--color-accent-orange); --card-accent-opacity: rgba(255, 107, 74, 0.07);">
+            <div class="setup-card-inner">
+              <div class="setup-card-header">
+                <span class="setup-icon" aria-hidden="true">⚡</span>
+                <span class="setup-pill">Workflow</span>
+              </div>
+              <h3 class="setup-name">Live Server</h3>
+              <p class="setup-desc">Launches a local development server with a live reload feature for static and dynamic web pages, speeding up visual adjustments.</p>
+              <div class="setup-actions">
+                <div class="setup-meta">
+                  <code class="setup-id" title="Extension ID">ritwickdey.liveserver</code>
+                  <button class="setup-copy-btn" data-id="ritwickdey.liveserver" title="Copy installation command" aria-label="Copy installation command for Live Server">
+                    📋 Copy Command
+                  </button>
+                </div>
+                <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noopener noreferrer" class="setup-btn" aria-label="View Live Server on VS Code Marketplace">
+                  Marketplace 🔌
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: JavaScript Snippets -->
+          <article class="setup-card fade-hidden" style="--card-accent: #3b82f6; --card-accent-opacity: rgba(59, 130, 246, 0.07);">
+            <div class="setup-card-inner">
+              <div class="setup-card-header">
+                <span class="setup-icon" aria-hidden="true">⚙️</span>
+                <span class="setup-pill">Code Snippets</span>
+              </div>
+              <h3 class="setup-name">JavaScript Snippets</h3>
+              <p class="setup-desc">Equips the editor with standard code snippets for modern JavaScript in ES6 syntax, helping write logic swiftly and correctly.</p>
+              <div class="setup-actions">
+                <div class="setup-meta">
+                  <code class="setup-id" title="xabikos.javascriptsnippets">xabikos.javascriptsnippets</code>
+                  <button class="setup-copy-btn" data-id="xabikos.javascriptsnippets" title="Copy installation command" aria-label="Copy installation command for JavaScript Snippets">
+                    📋 Copy Command
+                  </button>
+                </div>
+                <a href="https://marketplace.visualstudio.com/items?itemName=xabikos.javascriptsnippets" target="_blank" rel="noopener noreferrer" class="setup-btn" aria-label="View JavaScript Snippets on VS Code Marketplace">
+                  Marketplace 🔌
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -442,7 +533,7 @@
               </div>
             </div>
           </article>
-          <!-- New Project Card -->
+          <!-- Placeholder Project Card (Commented out)
           <article class="project-card fade-hidden">
   <div class="project-thumb-container">
     <div class="project-thumb theme-newproject">
@@ -469,6 +560,7 @@
     </div>
   </div>
 </article>
+          -->
         </div>
       </div>
     </section>
