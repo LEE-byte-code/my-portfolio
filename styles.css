@@ -879,6 +879,10 @@ section:nth-of-type(even) {
   background: linear-gradient(135deg, #140d1f 0%, #6366f1 100%);
 }
 
+.project-thumb.theme-newproject {
+  background: linear-gradient(135deg, #0d1117 0%, green 100%);
+}
+
 .project-thumb-overlay {
   font-size: 3.5rem;
   z-index: 2;
