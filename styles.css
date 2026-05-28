@@ -147,10 +147,11 @@ section:nth-of-type(even) {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(9, 10, 15, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal), backdrop-filter var(--transition-normal);
 }
 
 .nav-container {
@@ -1271,4 +1272,235 @@ a.contact-row-value:hover {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+}
+
+/* === ADDED INTERACTIVE STYLES (Leon's Portfolio Redesign) === */
+
+/* Feature 1: Smooth Scroll Navbar Offset Support */
+main[id], section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Feature 2: Scroll Fade-In Animations */
+.fade-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Feature 3: Mobile Hamburger Menu & Adjustments */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 110;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    outline: none;
+  }
+  
+  .hamburger span,
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: transform var(--transition-normal), top var(--transition-normal), bottom var(--transition-normal), opacity var(--transition-normal);
+    left: 3px;
+  }
+  
+  .hamburger::before {
+    top: 4px;
+  }
+  
+  .hamburger span {
+    top: 11px;
+  }
+  
+  .hamburger::after {
+    bottom: 4px;
+  }
+  
+  /* Morph to X when open */
+  .site-header.nav-open .hamburger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    background-color: var(--color-primary);
+  }
+  
+  .site-header.nav-open .hamburger span {
+    opacity: 0;
+  }
+  
+  .site-header.nav-open .hamburger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    background-color: var(--color-primary);
+  }
+
+  /* Slide down mobile nav links */
+  .site-header .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 20, 28, 0.98);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 2rem;
+    box-sizing: border-box;
+    gap: 1.5rem;
+    align-items: flex-start;
+    
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.4s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .site-header.nav-open .nav-links {
+    max-height: 320px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 2rem;
+  }
+
+  .nav-cta {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}
+
+/* Feature 4: Sticky Navbar Scrolled Background */
+.site-header.navbar-scrolled {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+/* On mobile, if navbar is open, ensure it has solid card-like background */
+@media (max-width: 768px) {
+  .site-header.nav-open {
+    background-color: #12141c !important;
+    border-bottom-color: var(--color-border);
+  }
+}
+
+/* Feature 5: Typing Cursor */
+.cursor {
+  display: inline-block;
+  color: var(--color-primary);
+  margin-left: 2px;
+  font-weight: bold;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Feature 6: Active Navigation Link Highlight */
+nav a.active {
+  color: var(--color-primary) !important;
+  border-bottom: 2px solid var(--color-primary) !important;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  nav a.active {
+    border-bottom: none !important;
+    border-left: 3px solid var(--color-primary) !important;
+    padding-left: 8px !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Feature 7: Skills Progress Bar Animation */
+.skill-bar {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+/* Feature 8: Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #000;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px) scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color var(--transition-fast);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 191, 165, 0.15);
+}
+
+.back-to-top:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Added Styling: Leon Mwangi Profile Image */
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 16px;
+  border: 2px solid var(--color-border);
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+  border-color: var(--color-primary);
 }

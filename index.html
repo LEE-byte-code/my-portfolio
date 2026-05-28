@@ -42,6 +42,10 @@
       <a class="nav-cta" href="mailto:leonmwangi595@gmail.com">
         Email me
       </a>
+
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -53,7 +57,7 @@
       <div class="container hero-grid">
         <!-- Left Column: Content & CTAs -->
         <div class="hero-content">
-          <p class="hero-label">Web developer in Nairobi, Kenya</p>
+          <p id="typing-tagline" class="hero-label">Web developer in Nairobi, Kenya</p>
           <h1 id="hero-title" class="hero-title">
             Leon Mwangi
           </h1>
@@ -65,22 +69,22 @@
             <a class="btn-primary" href="#projects">
               View projects
             </a>
-            <a class="btn-secondary" href="mailto:leonmwangi595@gmail.com">
+            <a class="btn-secondary" href="#contact">
               Start a conversation
             </a>
           </div>
 
           <!-- Hero Stats -->
-          <div class="hero-stats">
-            <div class="hero-stat-card">
+          <div class="hero-stats stagger-container">
+            <div class="hero-stat-card fade-hidden">
               <div class="hero-stat-title">HTML</div>
               <div class="hero-stat-desc">Foundations</div>
             </div>
-            <div class="hero-stat-card">
+            <div class="hero-stat-card fade-hidden">
               <div class="hero-stat-title">CSS</div>
               <div class="hero-stat-desc">Interfaces</div>
             </div>
-            <div class="hero-stat-card">
+            <div class="hero-stat-card fade-hidden">
               <div class="hero-stat-title">JS</div>
               <div class="hero-stat-desc">Interactivity</div>
             </div>
@@ -122,18 +126,18 @@
 
     <!-- Focus Areas Section -->
     <section class="focus-areas" aria-label="Portfolio focus areas">
-      <div class="container focus-grid">
-        <div class="focus-item">Responsive layouts</div>
-        <div class="focus-item">Accessible markup</div>
-        <div class="focus-item">Clean visual systems</div>
-        <div class="focus-item highlight">Project-ready habits</div>
+      <div class="container focus-grid stagger-container">
+        <div class="focus-item fade-hidden">Responsive layouts</div>
+        <div class="focus-item fade-hidden">Accessible markup</div>
+        <div class="focus-item fade-hidden">Clean visual systems</div>
+        <div class="focus-item highlight fade-hidden">Project-ready habits</div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" aria-labelledby="about-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-hidden">
           <div class="section-label">About me</div>
           <h2 id="about-title" class="section-title">
             Curious, practical, and serious about improving with every build.
@@ -145,15 +149,13 @@
 
         <div class="about-grid">
           <!-- Left Column: Visual/Graphic -->
-          <div class="about-visual">
+          <div class="about-visual fade-hidden">
             <div class="about-visual-accent"></div>
-            <div class="profile-placeholder">
-              <span class="initials" aria-hidden="true">LM</span>
-            </div>
+            <img class="profile-image" src="./images/leon_profile.png" alt="Leon Mwangi">
           </div>
 
           <!-- Right Column: Text & Facts -->
-          <div class="about-content">
+          <div class="about-content fade-hidden">
             <p class="about-text">
               I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
             </p>
@@ -180,22 +182,22 @@
             </div>
 
             <!-- Focus Sub-Cards (Preserving original content) -->
-            <div class="about-cards-container">
-              <article class="about-card">
+            <div class="about-cards-container stagger-container">
+              <article class="about-card fade-hidden">
                 <div class="about-card-num teal" aria-hidden="true">01</div>
                 <div class="about-card-content">
                   <h3 class="about-card-title">Structure</h3>
                   <p class="about-card-desc">Semantic HTML, clear content flow, and accessible page foundations.</p>
                 </div>
               </article>
-              <article class="about-card">
+              <article class="about-card fade-hidden">
                 <div class="about-card-num blue" aria-hidden="true">02</div>
                 <div class="about-card-content">
                   <h3 class="about-card-title">Interface</h3>
                   <p class="about-card-desc">CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
                 </div>
               </article>
-              <article class="about-card">
+              <article class="about-card fade-hidden">
                 <div class="about-card-num orange" aria-hidden="true">03</div>
                 <div class="about-card-content">
                   <h3 class="about-card-title">Momentum</h3>
@@ -211,7 +213,7 @@
     <!-- Skills Section -->
     <section id="skills" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-hidden">
           <div class="section-label">Skills</div>
           <h2 id="skills-title" class="section-title">
             The tools I am using to build sharper digital experiences.
@@ -225,8 +227,8 @@
           <!-- Core Skills Group -->
           <div class="skills-group">
             <h3 class="skills-group-title">Core Skills</h3>
-            <div class="skills-grid">
-              <article class="skill-card">
+            <div class="skills-grid stagger-container">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">🌐</span>
                   <span class="skill-pill advanced">Advanced</span>
@@ -234,11 +236,11 @@
                 <h4 class="skill-name">HTML5</h4>
                 <p class="skill-desc">Semantic structure, SEO foundations, accessibility standards, and clean page layouts.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 90%;" aria-label="HTML5 proficiency 90%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="90" aria-label="HTML5 proficiency 90%"></div>
                 </div>
               </article>
 
-              <article class="skill-card">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">🎨</span>
                   <span class="skill-pill advanced">Advanced</span>
@@ -246,11 +248,11 @@
                 <h4 class="skill-name">CSS3</h4>
                 <p class="skill-desc">Responsive grids, flexbox layouts, animations, transitions, and modern spacing systems.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 85%;" aria-label="CSS3 proficiency 85%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="85" aria-label="CSS3 proficiency 85%"></div>
                 </div>
               </article>
 
-              <article class="skill-card">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">⚡</span>
                   <span class="skill-pill intermediate">Intermediate</span>
@@ -258,7 +260,7 @@
                 <h4 class="skill-name">JavaScript</h4>
                 <p class="skill-desc">DOM manipulation, event handling, ES6 syntax, dynamic data integration, and scripting.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 75%;" aria-label="JavaScript proficiency 75%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="75" aria-label="JavaScript proficiency 75%"></div>
                 </div>
               </article>
             </div>
@@ -267,8 +269,8 @@
           <!-- Tools & Workflow Group -->
           <div class="skills-group">
             <h3 class="skills-group-title">Tools & Workflow</h3>
-            <div class="skills-grid">
-              <article class="skill-card">
+            <div class="skills-grid stagger-container">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">📦</span>
                   <span class="skill-pill intermediate">Intermediate</span>
@@ -276,11 +278,11 @@
                 <h4 class="skill-name">Git</h4>
                 <p class="skill-desc">Version control, branch management, local and remote repository synchronization.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 80%;" aria-label="Git proficiency 80%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="80" aria-label="Git proficiency 80%"></div>
                 </div>
               </article>
 
-              <article class="skill-card">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">🐱</span>
                   <span class="skill-pill intermediate">Intermediate</span>
@@ -288,11 +290,11 @@
                 <h4 class="skill-name">GitHub</h4>
                 <p class="skill-desc">Project publishing, hosting, continuous deployment workflows, and issue tracking.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 80%;" aria-label="GitHub proficiency 80%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="80" aria-label="GitHub proficiency 80%"></div>
                 </div>
               </article>
 
-              <article class="skill-card">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">💻</span>
                   <span class="skill-pill advanced">Advanced</span>
@@ -300,11 +302,11 @@
                 <h4 class="skill-name">VS Code</h4>
                 <p class="skill-desc">IDE configuration, syntax extensions, debugging, terminal usage, and fast workflows.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 85%;" aria-label="VS Code proficiency 85%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="85" aria-label="VS Code proficiency 85%"></div>
                 </div>
               </article>
 
-              <article class="skill-card">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">📱</span>
                   <span class="skill-pill advanced">Advanced</span>
@@ -312,11 +314,11 @@
                 <h4 class="skill-name">Responsive Design</h4>
                 <p class="skill-desc">Mobile-first engineering, breakpoints, fluid spacing, and flexible layouts across screens.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 85%;" aria-label="Responsive Design proficiency 85%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="85" aria-label="Responsive Design proficiency 85%"></div>
                 </div>
               </article>
 
-              <article class="skill-card">
+              <article class="skill-card fade-hidden">
                 <div class="skill-header">
                   <span class="skill-icon" aria-hidden="true">🛠️</span>
                   <span class="skill-pill intermediate">Intermediate</span>
@@ -324,7 +326,7 @@
                 <h4 class="skill-name">Chrome DevTools</h4>
                 <p class="skill-desc">Inspecting layouts, debugging javascript, styling overrides, and testing performance benchmarks.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar" style="width: 70%;" aria-label="Chrome DevTools proficiency 70%"></div>
+                  <div class="skill-progress-bar skill-bar" data-width="70" aria-label="Chrome DevTools proficiency 70%"></div>
                 </div>
               </article>
             </div>
@@ -336,7 +338,7 @@
     <!-- Projects Section -->
     <section id="projects" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-hidden">
           <div class="section-label">Projects</div>
           <h2 id="projects-title" class="section-title">
             Recent work built with focus, clarity, and a growing frontend toolkit.
@@ -346,9 +348,9 @@
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid stagger-container">
           <!-- Card 1 (Featured Portfolio) -->
-          <article class="project-card">
+          <article class="project-card fade-hidden">
             <span class="project-featured-badge">Featured</span>
             <div class="project-thumb-container">
               <div class="project-thumb theme-portfolio">
@@ -357,19 +359,20 @@
             </div>
             <div class="project-content">
               <div class="project-tags">
-                <span class="project-tag">HTML</span>
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
                 <span class="project-tag">Tailwind</span>
-                <span class="project-tag">Responsive</span>
+                <span class="project-tag">JavaScript</span>
               </div>
               <h3 class="project-title">Personal Portfolio Website</h3>
               <p class="project-desc">
-                A responsive portfolio built with HTML, CSS, and Tailwind to introduce my profile, skills, projects, and contact details with a polished visual direction.
+                A fully responsive, modern developer portfolio utilizing Tailwind CSS and CSS Grid. Features high-performance scroll transitions, typing animations, mobile hamburger navigation, and a dynamic contact portal.
               </p>
               <div class="project-actions">
-                <a href="mailto:leonmwangi595@gmail.com?subject=Portfolio%20Project%20Link" class="btn btn-live">
-                  Request link
+                <a href="#about" class="btn btn-live">
+                  Live Demo
                 </a>
-                <a href="https://github.com" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/leonmwangi/portfolio" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
               </div>
@@ -377,7 +380,7 @@
           </article>
 
           <!-- Card 2 (Task Management App - Mock) -->
-          <article class="project-card">
+          <article class="project-card fade-hidden">
             <div class="project-thumb-container">
               <div class="project-thumb theme-tasks">
                 <span class="project-thumb-overlay" aria-hidden="true">✅</span>
@@ -386,18 +389,19 @@
             <div class="project-content">
               <div class="project-tags">
                 <span class="project-tag">JavaScript</span>
-                <span class="project-tag">CSS Grid</span>
                 <span class="project-tag">LocalStorage</span>
+                <span class="project-tag">CSS Grid</span>
+                <span class="project-tag">Drag-and-Drop</span>
               </div>
-              <h3 class="project-title">Task Management App</h3>
+              <h3 class="project-title">Taskly - Interactive Kanban Dashboard</h3>
               <p class="project-desc">
-                A productivity dashboard enabling task organization, list creation, due-date notifications, and offline persistence.
+                A lightweight productivity dashboard for managing projects. Supports local persistence, task column sorting, priority labelling, deadline countdowns, and a responsive mobile layout.
               </p>
               <div class="project-actions">
                 <a href="#" class="btn btn-live">
                   Live Demo
                 </a>
-                <a href="https://github.com" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/leonmwangi/taskly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
               </div>
@@ -405,7 +409,7 @@
           </article>
 
           <!-- Card 3 (Weather Dashboard - Mock) -->
-          <article class="project-card">
+          <article class="project-card fade-hidden">
             <div class="project-thumb-container">
               <div class="project-thumb theme-weather">
                 <span class="project-thumb-overlay" aria-hidden="true">🌤️</span>
@@ -415,17 +419,18 @@
               <div class="project-tags">
                 <span class="project-tag">API Integration</span>
                 <span class="project-tag">ChartJS</span>
-                <span class="project-tag">Flexbox</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS Flexbox</span>
               </div>
-              <h3 class="project-title">Weather Forecast Dashboard</h3>
+              <h3 class="project-title">Weatherly - Climate Forecast Portal</h3>
               <p class="project-desc">
-                An interactive weather forecaster presenting real-time reports, wind tracking, and dynamic temperature trends.
+                An interactive weather application fetching real-time meteorological data via OpenWeatherMap API. Displays forecast graphs via Chart.js, city search auto-completion, and dynamic weather-based card layouts.
               </p>
               <div class="project-actions">
                 <a href="#" class="btn btn-live">
                   Live Demo
                 </a>
-                <a href="https://github.com" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/leonmwangi/weatherly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
               </div>
@@ -439,7 +444,7 @@
     <section id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
         <!-- Left Column: Info Panel -->
-        <div class="contact-info">
+        <div class="contact-info fade-hidden">
           <div class="contact-info-header">
             <div class="section-label">Contact</div>
             <h3 id="contact-title">Let's work together.</h3>
@@ -473,7 +478,7 @@
           </div>
 
           <div class="contact-socials">
-            <a href="https://github.com" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/leonmwangi" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <span>GH</span>
             </a>
             <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -483,7 +488,7 @@
         </div>
 
         <!-- Right Column: Interactive Form -->
-        <div class="contact-form-container">
+        <div class="contact-form-container fade-hidden">
           <form class="contact-form" action="#" method="POST">
             <div class="form-group">
               <label for="form-name" class="form-label">Full Name</label>
@@ -529,7 +534,7 @@
       <!-- Right: Socials & Back to top -->
       <div class="footer-right">
         <div class="footer-socials">
-          <a href="https://github.com" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/leonmwangi" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <span>GH</span>
           </a>
           <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -542,6 +547,10 @@
       </div>
     </div>
   </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
