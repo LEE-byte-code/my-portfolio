@@ -39,9 +39,14 @@
         </ul>
       </nav>
 
-      <a class="nav-cta" href="mailto:leonmwangi595@gmail.com">
-        Email me
-      </a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <span class="theme-toggle-icon">🌙</span>
+        </button>
+        <a class="nav-cta" href="mailto:leonmwangi595@gmail.com">
+          Email me
+        </a>
+      </div>
 
       <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
@@ -369,9 +374,9 @@
                 A fully responsive, modern developer portfolio utilizing Tailwind CSS and CSS Grid. Features high-performance scroll transitions, typing animations, mobile hamburger navigation, and a dynamic contact portal.
               </p>
               <div class="project-actions">
-                <a href="#about" class="btn btn-live">
+                <button type="button" class="btn btn-live" data-project="portfolio">
                   Live Demo
-                </a>
+                </button>
                 <a href="https://github.com/leonmwangi/portfolio" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
@@ -398,9 +403,9 @@
                 A lightweight productivity dashboard for managing projects. Supports local persistence, task column sorting, priority labelling, deadline countdowns, and a responsive mobile layout.
               </p>
               <div class="project-actions">
-                <a href="#" class="btn btn-live">
+                <button type="button" class="btn btn-live" data-project="taskly">
                   Live Demo
-                </a>
+                </button>
                 <a href="https://github.com/leonmwangi/taskly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
@@ -427,9 +432,9 @@
                 An interactive weather application fetching real-time meteorological data via OpenWeatherMap API. Displays forecast graphs via Chart.js, city search auto-completion, and dynamic weather-based card layouts.
               </p>
               <div class="project-actions">
-                <a href="#" class="btn btn-live">
+                <button type="button" class="btn btn-live" data-project="weatherly">
                   Live Demo
-                </a>
+                </button>
                 <a href="https://github.com/leonmwangi/weatherly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
@@ -547,6 +552,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- Dynamic Project Modal Overlay -->
+  <div id="projectModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 id="modalTitle" class="modal-title">Project Demo</h2>
+        <button id="modalClose" class="modal-close-btn" aria-label="Close interactive demo">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Interactive content injected dynamically -->
+      </div>
+    </div>
+  </div>
 
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
