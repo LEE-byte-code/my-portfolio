@@ -295,16 +295,16 @@ function initThemeToggle() {
 
   if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
     document.body.classList.add('light-theme');
-    if (iconEl) iconEl.textContent = '☀️';
+    if (iconEl) iconEl.textContent = '💡';
   } else {
     document.body.classList.remove('light-theme');
-    if (iconEl) iconEl.textContent = '🌙';
+    if (iconEl) iconEl.textContent = '🔌';
   }
 
   toggleBtn.addEventListener('click', () => {
     const isLight = document.body.classList.toggle('light-theme');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    if (iconEl) iconEl.textContent = isLight ? '☀️' : '🌙';
+    if (iconEl) iconEl.textContent = isLight ? '💡' : '🔌';
     
     // Smooth transition pop!
     toggleBtn.style.transform = 'scale(0.9) rotate(15deg)';
@@ -445,7 +445,7 @@ function renderPortfolioBuilder() {
           <span class="builder-stats-label">Simulated Portfolio Visitors</span>
         </div>
         <button id="incrementViewsBtn" class="builder-btn" style="background-color: var(--color-accent-orange); color: #fff;">
-          🚀 Boost Stats
+          🏗️ Boost Stats
         </button>
       </div>
     </div>
@@ -585,7 +585,7 @@ function renderTasklyKanban() {
         <div class="kanban-task-actions">
           ${task.status !== 'todo' ? `<button class="kanban-task-btn move-left-btn" data-id="${task.id}" title="Move left">◀</button>` : ''}
           ${task.status !== 'done' ? `<button class="kanban-task-btn move-right-btn" data-id="${task.id}" title="Move right">▶</button>` : ''}
-          <button class="kanban-task-btn delete-btn" data-id="${task.id}" title="Delete task">🗑️</button>
+          <button class="kanban-task-btn delete-btn" data-id="${task.id}" title="Delete task">🔨</button>
         </div>
       `;
       
@@ -711,7 +711,7 @@ function renderWeatherDashboard() {
         const capCity = cityName.charAt(0).toUpperCase() + cityName.slice(1);
         data = {
           name: capCity,
-          country: 'Global Station 🌍',
+          country: 'Global Station 📡',
           temp: temp,
           desc: cond.desc,
           icon: cond.icon,
