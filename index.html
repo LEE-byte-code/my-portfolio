@@ -5,256 +5,543 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leon Mwangi | Web Developer Portfolio</title>
   <meta name="description" content="Portfolio website for Leon Mwangi, a web developer in Nairobi building responsive, accessible websites.">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./src/output.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen overflow-x-hidden bg-[#f6f5ef] text-[#101418] antialiased">
-  <a class="fixed left-4 top-4 z-50 -translate-y-24 rounded-md bg-[#101418] px-4 py-3 text-sm font-extrabold text-white shadow-lg transition focus:translate-y-0" href="#main">
+<body class="antialiased">
+
+  <!-- Skip Link for Accessibility -->
+  <a class="sr-only focus:not-sr-only fixed left-4 top-4 z-50 rounded-md bg-[#ff6b4a] px-4 py-3 text-sm font-extrabold text-white shadow-lg transition" href="#main">
     Skip to content
   </a>
 
-  <header class="sticky top-0 z-40 border-b border-[#101418]/10 bg-[#f6f5ef]/90 backdrop-blur-xl">
-    <nav class="mx-auto flex min-h-20 max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
-      <a href="#main" class="inline-flex min-w-0 items-center gap-3 font-black tracking-normal text-[#101418]" aria-label="Leon Mwangi home">
-        <span class="grid size-10 shrink-0 place-items-center rounded-md bg-[#101418] text-sm text-white shadow-sm">LM</span>
-        <span class="truncate">Leon Mwangi</span>
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#main" class="nav-logo" aria-label="Leon Mwangi Home">
+        <span class="nav-logo-badge">LM</span>
+        <span class="nav-logo-text">Leon Mwangi</span>
       </a>
 
-      <ul class="order-3 flex w-full items-center gap-5 overflow-x-auto text-sm font-extrabold text-[#58645f] sm:w-auto sm:justify-center md:order-none">
-        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#about">About</a></li>
-        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#skills">Skills</a></li>
-        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#projects">Projects</a></li>
-        <li><a class="whitespace-nowrap transition hover:text-[#008c72]" href="#contact">Contact</a></li>
-      </ul>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-      <a class="hidden min-h-10 items-center justify-center rounded-md border border-[#101418] px-4 text-sm font-black text-[#101418] transition hover:bg-[#101418] hover:text-white sm:inline-flex" href="mailto:leonmwangi595@gmail.com">
+      <a class="nav-cta" href="mailto:leonmwangi595@gmail.com">
         Email me
       </a>
-    </nav>
+    </div>
   </header>
 
+  <!-- Main Content Wrapper -->
   <main id="main">
-    <section class="relative isolate overflow-hidden border-b border-[#101418]/10 bg-[linear-gradient(180deg,#f7f5ee_0%,#ffffff_58%,#edf5f2_100%)]" aria-labelledby="hero-title">
-      <div class="absolute inset-0 -z-10 opacity-70 [background-image:linear-gradient(rgba(16,20,24,.055)_1px,transparent_1px),linear-gradient(90deg,rgba(0,140,114,.055)_1px,transparent_1px)] [background-size:72px_72px]" aria-hidden="true"></div>
 
-      <div class="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">Web developer in Nairobi, Kenya</p>
-          <h1 id="hero-title" class="max-w-4xl text-5xl font-black leading-[.95] tracking-normal text-[#101418] sm:text-6xl lg:text-8xl">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <!-- Left Column: Content & CTAs -->
+        <div class="hero-content">
+          <p class="hero-label">Web developer in Nairobi, Kenya</p>
+          <h1 id="hero-title" class="hero-title">
             Leon Mwangi
           </h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-[#33413c] sm:text-xl">
+          <p class="hero-tagline">
             I build clean, responsive websites with strong structure, smooth layouts, and the polish that makes a first impression feel intentional.
           </p>
 
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex min-h-12 items-center justify-center rounded-md bg-[#008c72] px-5 font-black text-white shadow-[0_18px_36px_rgba(0,140,114,.24)] transition hover:-translate-y-0.5 hover:bg-[#006451]" href="#projects">
+          <div class="hero-ctas">
+            <a class="btn-primary" href="#projects">
               View projects
             </a>
-            <a class="inline-flex min-h-12 items-center justify-center rounded-md border border-[#101418]/15 bg-white/75 px-5 font-black text-[#101418] shadow-sm transition hover:-translate-y-0.5 hover:border-[#101418] hover:bg-white" href="mailto:leonmwangi595@gmail.com">
+            <a class="btn-secondary" href="mailto:leonmwangi595@gmail.com">
               Start a conversation
             </a>
           </div>
 
-          <dl class="mt-8 grid grid-cols-3 gap-3">
-            <div class="rounded-lg border border-[#101418]/10 bg-white/80 p-4 shadow-sm">
-              <dt class="text-2xl font-black leading-none text-[#101418]">HTML</dt>
-              <dd class="mt-2 text-xs font-bold leading-5 text-[#64706d] sm:text-sm">Semantic foundations</dd>
+          <!-- Hero Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat-card">
+              <div class="hero-stat-title">HTML</div>
+              <div class="hero-stat-desc">Foundations</div>
             </div>
-            <div class="rounded-lg border border-[#101418]/10 bg-white/80 p-4 shadow-sm">
-              <dt class="text-2xl font-black leading-none text-[#101418]">CSS</dt>
-              <dd class="mt-2 text-xs font-bold leading-5 text-[#64706d] sm:text-sm">Responsive interfaces</dd>
+            <div class="hero-stat-card">
+              <div class="hero-stat-title">CSS</div>
+              <div class="hero-stat-desc">Interfaces</div>
             </div>
-            <div class="rounded-lg border border-[#101418]/10 bg-white/80 p-4 shadow-sm">
-              <dt class="text-2xl font-black leading-none text-[#101418]">JS</dt>
-              <dd class="mt-2 text-xs font-bold leading-5 text-[#64706d] sm:text-sm">Growing interactivity</dd>
-            </div>
-          </dl>
-        </div>
-
-        <figure class="relative mx-auto grid w-full max-w-md gap-4 lg:ml-auto" aria-label="Portfolio visual">
-          <div class="absolute -left-4 top-8 hidden h-28 w-28 rounded-lg border-l-4 border-t-4 border-[#ff6b4a] sm:block" aria-hidden="true"></div>
-          <div class="relative overflow-hidden rounded-lg border-[6px] border-white bg-[#101418] shadow-[0_32px_90px_rgba(16,20,24,.2)]">
-            <img class="aspect-[4/5] h-full w-full object-cover" src="images/jon-tyson-6RcT6zEmm9A-unsplash.jpg" alt="Red and yellow storefront sign used as a bold portfolio visual">
-            <div class="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(16,20,24,.82))] p-5 text-white">
-              <p class="text-xs font-black uppercase tracking-[.16em] text-[#f2b84b]">Available for web projects</p>
-              <p class="mt-2 max-w-sm text-lg font-black leading-tight">Frontend foundations, visual polish, and practical builds.</p>
+            <div class="hero-stat-card">
+              <div class="hero-stat-title">JS</div>
+              <div class="hero-stat-desc">Interactivity</div>
             </div>
           </div>
-          <figcaption class="grid grid-cols-2 gap-3">
-            <span class="rounded-lg border border-[#101418]/10 bg-white p-4 text-sm font-black shadow-sm">
-              <span class="block text-xs uppercase tracking-[.14em] text-[#00715d]">Based in</span>
-              Nairobi
-            </span>
-            <span class="rounded-lg border border-[#101418]/10 bg-white p-4 text-sm font-black shadow-sm">
-              <span class="block text-xs uppercase tracking-[.14em] text-[#00715d]">Building</span>
-              Responsive Web
-            </span>
-          </figcaption>
-        </figure>
+        </div>
+
+        <!-- Right Column: Visual Element (Code Editor Card) -->
+        <div class="hero-visual-col">
+          <div class="code-editor-card" aria-hidden="true">
+            <div class="editor-header">
+              <div class="editor-dots">
+                <span class="editor-dot dot-red"></span>
+                <span class="editor-dot dot-yellow"></span>
+                <span class="editor-dot dot-green"></span>
+              </div>
+              <span class="editor-title">leon.js</span>
+            </div>
+            <div class="editor-body">
+              <div class="editor-lines">
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
+              </div>
+              <pre class="editor-code"><code><span class="code-keyword">const</span> developer = <span class="code-bracket">{</span>
+  name: <span class="code-string">"Leon Mwangi"</span>,
+  role: <span class="code-string">"Web Developer"</span>,
+  location: <span class="code-string">"Nairobi, Kenya"</span>,
+  skills: <span class="code-bracket">[</span>
+    <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JS"</span>, <span class="code-string">"Git"</span>
+  <span class="code-bracket">]</span>,
+  status: <span class="code-string">"Available for projects"</span>
+<span class="code-bracket">}</span>;
+
+<span class="code-comment">// Building responsive web...</span>
+<span class="code-function">console</span>.log(developer.status);<span class="code-cursor"></span></code></pre>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="border-b border-[#101418]/10 bg-[#101418] text-white" aria-label="Portfolio focus areas">
-      <div class="mx-auto grid max-w-6xl grid-cols-2 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
-        <p class="border-r border-white/10 py-5 text-center text-sm font-black text-white/80">Responsive layouts</p>
-        <p class="border-r-0 border-white/10 py-5 text-center text-sm font-black text-white/80 lg:border-r">Accessible markup</p>
-        <p class="border-r border-t border-white/10 py-5 text-center text-sm font-black text-white/80 lg:border-t-0">Clean visual systems</p>
-        <p class="border-t border-white/10 py-5 text-center text-sm font-black text-[#f2b84b] lg:border-t-0">Project-ready habits</p>
+    <!-- Focus Areas Section -->
+    <section class="focus-areas" aria-label="Portfolio focus areas">
+      <div class="container focus-grid">
+        <div class="focus-item">Responsive layouts</div>
+        <div class="focus-item">Accessible markup</div>
+        <div class="focus-item">Clean visual systems</div>
+        <div class="focus-item highlight">Project-ready habits</div>
       </div>
     </section>
 
-    <section id="about" class="border-b border-[#101418]/10 bg-white">
-      <div class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.95fr_1.05fr] lg:px-8 lg:py-28">
-        <div>
-          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">About me</p>
-          <h2 class="max-w-3xl text-4xl font-black leading-tight tracking-normal text-[#101418] sm:text-5xl">
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">About me</div>
+          <h2 id="about-title" class="section-title">
             Curious, practical, and serious about improving with every build.
           </h2>
-        </div>
-
-        <div class="grid gap-8">
-          <div class="space-y-5 text-lg leading-8 text-[#33413c]">
-            <p>
-              Hello, I am Leon Mwangi, a web developer based in Nairobi. I enjoy turning ideas into websites that are clear, easy to use, and polished across screens.
-            </p>
-            <p>
-              I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
-            </p>
-            <a href="mailto:leonmwangi595@gmail.com?subject=CV%20Request" class="inline-flex border-b-2 border-current font-black text-[#006451] transition hover:text-[#ff6b4a]">
-              Request CV
-            </a>
-          </div>
-
-          <div class="grid gap-3">
-            <article class="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-[#101418]/10 bg-[#f6f5ef] p-5">
-              <span class="grid size-11 place-items-center rounded-md bg-[#e5f3ef] text-xs font-black tracking-[.12em] text-[#006451]">01</span>
-              <div>
-                <h3 class="text-lg font-black text-[#101418]">Structure</h3>
-                <p class="mt-1 leading-7 text-[#64706d]">Semantic HTML, clear content flow, and accessible page foundations.</p>
-              </div>
-            </article>
-            <article class="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-[#101418]/10 bg-[#f6f5ef] p-5">
-              <span class="grid size-11 place-items-center rounded-md bg-[#e8efff] text-xs font-black tracking-[.12em] text-[#2f6feb]">02</span>
-              <div>
-                <h3 class="text-lg font-black text-[#101418]">Interface</h3>
-                <p class="mt-1 leading-7 text-[#64706d]">CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
-              </div>
-            </article>
-            <article class="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-[#101418]/10 bg-[#f6f5ef] p-5">
-              <span class="grid size-11 place-items-center rounded-md bg-[#fff1d6] text-xs font-black tracking-[.12em] text-[#8a5b00]">03</span>
-              <div>
-                <h3 class="text-lg font-black text-[#101418]">Momentum</h3>
-                <p class="mt-1 leading-7 text-[#64706d]">Consistent practice, GitHub publishing, and improving through feedback.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="bg-[#f6f5ef]">
-      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div class="max-w-3xl">
-          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">Skills</p>
-          <h2 class="text-4xl font-black leading-tight tracking-normal text-[#101418] sm:text-5xl">
-            The tools I am using to build sharper digital experiences.
-          </h2>
-        </div>
-
-        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#008c72]/40 hover:shadow-lg">
-            <p class="text-xs font-black uppercase tracking-[.16em] text-[#00715d]">HTML</p>
-            <h3 class="mt-8 text-2xl font-black text-[#101418]">HTML5</h3>
-            <p class="mt-3 leading-7 text-[#64706d]">Semantic structure, accessible content, forms, links, and maintainable page foundations.</p>
-          </article>
-          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#2f6feb]/40 hover:shadow-lg">
-            <p class="text-xs font-black uppercase tracking-[.16em] text-[#2f6feb]">CSS</p>
-            <h3 class="mt-8 text-2xl font-black text-[#101418]">CSS3</h3>
-            <p class="mt-3 leading-7 text-[#64706d]">Responsive layouts, visual hierarchy, animations, Grid, Flexbox, and polished UI details.</p>
-          </article>
-          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ff6b4a]/40 hover:shadow-lg">
-            <p class="text-xs font-black uppercase tracking-[.16em] text-[#d84f33]">JS</p>
-            <h3 class="mt-8 text-2xl font-black text-[#101418]">JavaScript</h3>
-            <p class="mt-3 leading-7 text-[#64706d]">Browser fundamentals, interactivity, DOM updates, and problem-solving practice.</p>
-          </article>
-          <article class="min-h-64 rounded-lg border border-[#101418]/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#f2b84b]/60 hover:shadow-lg">
-            <p class="text-xs font-black uppercase tracking-[.16em] text-[#8a5b00]">Git</p>
-            <h3 class="mt-8 text-2xl font-black text-[#101418]">GitHub</h3>
-            <p class="mt-3 leading-7 text-[#64706d]">Version control, project publishing, portfolio hosting, and sharing progress online.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="border-y border-[#101418]/10 bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div class="max-w-3xl">
-          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#00715d]">Projects</p>
-          <h2 class="text-4xl font-black leading-tight tracking-normal text-[#101418] sm:text-5xl">
-            Recent work built with focus, clarity, and a growing frontend toolkit.
-          </h2>
-        </div>
-
-        <article class="mt-10 grid overflow-hidden rounded-lg border border-[#101418]/10 bg-[#101418] shadow-[0_28px_80px_rgba(16,20,24,.14)] transition hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(16,20,24,.18)] lg:grid-cols-[.88fr_1.12fr]">
-          <div class="relative min-h-80 overflow-hidden bg-[#101418] p-5 text-white">
-            <img class="absolute inset-0 h-full w-full object-cover opacity-32" src="images/profile.jpg" alt="Portfolio avatar graphic">
-            <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(16,20,24,.94),rgba(0,100,81,.82))]" aria-hidden="true"></div>
-            <div class="relative flex h-full min-h-72 flex-col justify-between">
-              <div class="flex gap-2" aria-hidden="true">
-                <span class="size-3 rounded-full bg-[#ff6b4a]"></span>
-                <span class="size-3 rounded-full bg-[#f2b84b]"></span>
-                <span class="size-3 rounded-full bg-[#008c72]"></span>
-              </div>
-              <div class="grid grid-cols-[1.35fr_.8fr] grid-rows-2 gap-3" aria-hidden="true">
-                <span class="row-span-2 rounded-lg border border-white/15 bg-white/10"></span>
-                <span class="rounded-lg border border-white/15 bg-white/10"></span>
-                <span class="rounded-lg border border-white/15 bg-white/10"></span>
-              </div>
-              <p class="max-w-sm text-5xl font-black leading-none tracking-normal sm:text-6xl">Portfolio</p>
-            </div>
-          </div>
-
-          <div class="bg-white p-7 sm:p-10 lg:p-12">
-            <p class="text-xs font-black uppercase tracking-[.16em] text-[#00715d]">Featured build</p>
-            <h3 class="mt-4 text-3xl font-black leading-tight tracking-normal text-[#101418] sm:text-4xl">Personal Portfolio Website</h3>
-            <p class="mt-4 max-w-2xl text-lg leading-8 text-[#64706d]">
-              A responsive portfolio built with HTML, CSS, and Tailwind to introduce my profile, skills, projects, and contact details with a polished visual direction.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
-              <span class="rounded-md bg-[#edf5f2] px-3 py-2 text-xs font-black uppercase tracking-[.08em] text-[#006451]">HTML</span>
-              <span class="rounded-md bg-[#e8efff] px-3 py-2 text-xs font-black uppercase tracking-[.08em] text-[#2f6feb]">Tailwind</span>
-              <span class="rounded-md bg-[#fff1d6] px-3 py-2 text-xs font-black uppercase tracking-[.08em] text-[#8a5b00]">Responsive</span>
-            </div>
-            <a href="mailto:leonmwangi595@gmail.com?subject=Portfolio%20Project%20Link" class="mt-7 inline-flex border-b-2 border-current font-black text-[#006451] transition hover:text-[#ff6b4a]">
-              Request project link
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-[#101418] text-white" aria-labelledby="contact-title">
-      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-16 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#f2b84b]">Contact</p>
-          <h2 id="contact-title" class="text-4xl font-black leading-tight tracking-normal sm:text-5xl">Have an opportunity or idea?</h2>
-          <p class="mt-5 text-lg leading-8 text-white/75">
-            I am open to internships, collaborations, freelance practice projects, and conversations about building better websites.
+          <p class="section-subtitle">
+            I enjoy turning ideas into websites that are clear, easy to use, and polished across screens.
           </p>
         </div>
-        <a href="mailto:leonmwangi595@gmail.com" class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-md bg-white px-5 font-black text-[#101418] transition hover:-translate-y-0.5 hover:bg-[#f2b84b]">
-          Say hi
-        </a>
+
+        <div class="about-grid">
+          <!-- Left Column: Visual/Graphic -->
+          <div class="about-visual">
+            <div class="about-visual-accent"></div>
+            <div class="profile-placeholder">
+              <span class="initials" aria-hidden="true">LM</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Text & Facts -->
+          <div class="about-content">
+            <p class="about-text">
+              I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
+            </p>
+            
+            <ul class="about-facts" aria-label="Quick facts">
+              <li class="about-fact-item">
+                <span class="icon" aria-hidden="true">📍</span>
+                <span><strong>Location:</strong> Nairobi, Kenya</span>
+              </li>
+              <li class="about-fact-item">
+                <span class="icon" aria-hidden="true">💼</span>
+                <span><strong>Role:</strong> Junior Web Developer</span>
+              </li>
+              <li class="about-fact-item">
+                <span class="icon" aria-hidden="true">⚡</span>
+                <span><strong>Status:</strong> Available for Projects</span>
+              </li>
+            </ul>
+
+            <div class="about-actions">
+              <a href="mailto:leonmwangi595@gmail.com?subject=CV%20Request" class="btn-primary">
+                Request CV
+              </a>
+            </div>
+
+            <!-- Focus Sub-Cards (Preserving original content) -->
+            <div class="about-cards-container">
+              <article class="about-card">
+                <div class="about-card-num teal" aria-hidden="true">01</div>
+                <div class="about-card-content">
+                  <h3 class="about-card-title">Structure</h3>
+                  <p class="about-card-desc">Semantic HTML, clear content flow, and accessible page foundations.</p>
+                </div>
+              </article>
+              <article class="about-card">
+                <div class="about-card-num blue" aria-hidden="true">02</div>
+                <div class="about-card-content">
+                  <h3 class="about-card-title">Interface</h3>
+                  <p class="about-card-desc">CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
+                </div>
+              </article>
+              <article class="about-card">
+                <div class="about-card-num orange" aria-hidden="true">03</div>
+                <div class="about-card-content">
+                  <h3 class="about-card-title">Momentum</h3>
+                  <p class="about-card-desc">Consistent practice, GitHub publishing, and improving through feedback.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Skills Section -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Skills</div>
+          <h2 id="skills-title" class="section-title">
+            The tools I am using to build sharper digital experiences.
+          </h2>
+          <p class="section-subtitle">
+            A growing stack of languages, libraries, and developer tools.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Core Skills Group -->
+          <div class="skills-group">
+            <h3 class="skills-group-title">Core Skills</h3>
+            <div class="skills-grid">
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">🌐</span>
+                  <span class="skill-pill advanced">Advanced</span>
+                </div>
+                <h4 class="skill-name">HTML5</h4>
+                <p class="skill-desc">Semantic structure, SEO foundations, accessibility standards, and clean page layouts.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 90%;" aria-label="HTML5 proficiency 90%"></div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">🎨</span>
+                  <span class="skill-pill advanced">Advanced</span>
+                </div>
+                <h4 class="skill-name">CSS3</h4>
+                <p class="skill-desc">Responsive grids, flexbox layouts, animations, transitions, and modern spacing systems.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 85%;" aria-label="CSS3 proficiency 85%"></div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">⚡</span>
+                  <span class="skill-pill intermediate">Intermediate</span>
+                </div>
+                <h4 class="skill-name">JavaScript</h4>
+                <p class="skill-desc">DOM manipulation, event handling, ES6 syntax, dynamic data integration, and scripting.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 75%;" aria-label="JavaScript proficiency 75%"></div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tools & Workflow Group -->
+          <div class="skills-group">
+            <h3 class="skills-group-title">Tools & Workflow</h3>
+            <div class="skills-grid">
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">📦</span>
+                  <span class="skill-pill intermediate">Intermediate</span>
+                </div>
+                <h4 class="skill-name">Git</h4>
+                <p class="skill-desc">Version control, branch management, local and remote repository synchronization.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 80%;" aria-label="Git proficiency 80%"></div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">🐱</span>
+                  <span class="skill-pill intermediate">Intermediate</span>
+                </div>
+                <h4 class="skill-name">GitHub</h4>
+                <p class="skill-desc">Project publishing, hosting, continuous deployment workflows, and issue tracking.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 80%;" aria-label="GitHub proficiency 80%"></div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">💻</span>
+                  <span class="skill-pill advanced">Advanced</span>
+                </div>
+                <h4 class="skill-name">VS Code</h4>
+                <p class="skill-desc">IDE configuration, syntax extensions, debugging, terminal usage, and fast workflows.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 85%;" aria-label="VS Code proficiency 85%"></div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">📱</span>
+                  <span class="skill-pill advanced">Advanced</span>
+                </div>
+                <h4 class="skill-name">Responsive Design</h4>
+                <p class="skill-desc">Mobile-first engineering, breakpoints, fluid spacing, and flexible layouts across screens.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 85%;" aria-label="Responsive Design proficiency 85%"></div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span class="skill-icon" aria-hidden="true">🛠️</span>
+                  <span class="skill-pill intermediate">Intermediate</span>
+                </div>
+                <h4 class="skill-name">Chrome DevTools</h4>
+                <p class="skill-desc">Inspecting layouts, debugging javascript, styling overrides, and testing performance benchmarks.</p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-bar" style="width: 70%;" aria-label="Chrome DevTools proficiency 70%"></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Projects</div>
+          <h2 id="projects-title" class="section-title">
+            Recent work built with focus, clarity, and a growing frontend toolkit.
+          </h2>
+          <p class="section-subtitle">
+            A selection of builds showcasing modern UI development, layouts, and scripting.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Card 1 (Featured Portfolio) -->
+          <article class="project-card">
+            <span class="project-featured-badge">Featured</span>
+            <div class="project-thumb-container">
+              <div class="project-thumb theme-portfolio">
+                <span class="project-thumb-overlay" aria-hidden="true">📂</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">Tailwind</span>
+                <span class="project-tag">Responsive</span>
+              </div>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                A responsive portfolio built with HTML, CSS, and Tailwind to introduce my profile, skills, projects, and contact details with a polished visual direction.
+              </p>
+              <div class="project-actions">
+                <a href="mailto:leonmwangi595@gmail.com?subject=Portfolio%20Project%20Link" class="btn btn-live">
+                  Request link
+                </a>
+                <a href="https://github.com" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 (Task Management App - Mock) -->
+          <article class="project-card">
+            <div class="project-thumb-container">
+              <div class="project-thumb theme-tasks">
+                <span class="project-thumb-overlay" aria-hidden="true">✅</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS Grid</span>
+                <span class="project-tag">LocalStorage</span>
+              </div>
+              <h3 class="project-title">Task Management App</h3>
+              <p class="project-desc">
+                A productivity dashboard enabling task organization, list creation, due-date notifications, and offline persistence.
+              </p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-live">
+                  Live Demo
+                </a>
+                <a href="https://github.com" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 (Weather Dashboard - Mock) -->
+          <article class="project-card">
+            <div class="project-thumb-container">
+              <div class="project-thumb theme-weather">
+                <span class="project-thumb-overlay" aria-hidden="true">🌤️</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">API Integration</span>
+                <span class="project-tag">ChartJS</span>
+                <span class="project-tag">Flexbox</span>
+              </div>
+              <h3 class="project-title">Weather Forecast Dashboard</h3>
+              <p class="project-desc">
+                An interactive weather forecaster presenting real-time reports, wind tracking, and dynamic temperature trends.
+              </p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-live">
+                  Live Demo
+                </a>
+                <a href="https://github.com" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <!-- Left Column: Info Panel -->
+        <div class="contact-info">
+          <div class="contact-info-header">
+            <div class="section-label">Contact</div>
+            <h3 id="contact-title">Let's work together.</h3>
+            <p>
+              I am open to internships, collaborations, freelance projects, and conversations about building better websites.
+            </p>
+          </div>
+
+          <div class="contact-rows">
+            <div class="contact-row">
+              <div class="contact-row-icon" aria-hidden="true">📍</div>
+              <div class="contact-row-text">
+                <span class="contact-row-label">Location</span>
+                <span class="contact-row-value">Nairobi, Kenya</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-row-icon" aria-hidden="true">✉️</div>
+              <div class="contact-row-text">
+                <span class="contact-row-label">Email</span>
+                <a href="mailto:leonmwangi595@gmail.com" class="contact-row-value">leonmwangi595@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-row-icon" aria-hidden="true">⚡</div>
+              <div class="contact-row-text">
+                <span class="contact-row-label">Response Time</span>
+                <span class="contact-row-value">Within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <span>GH</span>
+            </a>
+            <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <span>LN</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Form -->
+        <div class="contact-form-container">
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="How can I help you?" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="border-t border-[#101418]/10 bg-[#f6f5ef] px-4 py-6 text-center text-sm font-semibold text-[#64706d]">
-    <p>Built by Leon Mwangi | 2026</p>
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <!-- Left: Name & Tagline -->
+      <div class="footer-brand">
+        <p class="footer-name">Leon Mwangi</p>
+        <p class="footer-tagline">Building the web from Nairobi 🇰🇪</p>
+      </div>
+
+      <!-- Center: Navigation Row -->
+      <ul class="footer-nav" aria-label="Footer navigation">
+        <li><a href="#about" class="footer-nav-link">About</a></li>
+        <li><a href="#skills" class="footer-nav-link">Skills</a></li>
+        <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+        <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right: Socials & Back to top -->
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://github.com" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <span>GH</span>
+          </a>
+          <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <span>LN</span>
+          </a>
+        </div>
+        <a href="#main" class="footer-back-to-top" aria-label="Back to top of the page">
+          Back to top ↑
+        </a>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
