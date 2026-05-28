@@ -254,6 +254,17 @@ section:nth-of-type(even) {
   }
 }
 
+/* Mobile-only email link shown inside hamburger dropdown */
+.mobile-email-item {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .mobile-email-item {
+    display: block;
+  }
+}
+
 /* Focus Areas styling (Layout preserved content) */
 .focus-areas {
   border-bottom: 1px solid var(--color-border);
@@ -1379,7 +1390,7 @@ main[id], section[id] {
   }
   
   .site-header.nav-open .nav-links {
-    max-height: 320px;
+    max-height: 400px;
     opacity: 1;
     pointer-events: auto;
     padding: 2rem;
@@ -1548,6 +1559,8 @@ nav a.active {
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  z-index: 115;
 }
 
 .theme-toggle {
@@ -1561,6 +1574,7 @@ nav a.active {
   color: var(--color-text);
   font-size: 1.15rem;
   cursor: pointer;
+  touch-action: manipulation;
   transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
   outline: none;
 }
@@ -2278,4 +2292,3 @@ nav a.active {
   animation-play-state: paused;
   transform: scale(0.96) !important;
 }
-
