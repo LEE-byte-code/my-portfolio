@@ -6,19 +6,28 @@
   <title>Leon Mwangi | Web Developer Portfolio</title>
   <meta name="description" content="Portfolio website for Leon Mwangi, a web developer in Nairobi building responsive, accessible websites.">
   
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:title" content="Leon Mwangi | Web Developer Portfolio">
+  <meta property="og:description" content="Web developer in Nairobi building clean, responsive websites with strong structure and polished interfaces.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leonmwangi.dev">
+  <meta property="og:image" content="./images/og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leon Mwangi | Web Developer Portfolio">
+  <meta name="twitter:description" content="Web developer in Nairobi building clean, responsive websites.">
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="./src/output.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
+<body>
 
   <!-- Skip Link for Accessibility -->
-  <a class="sr-only focus:not-sr-only fixed left-4 top-4 z-50 rounded-md bg-[#ff6b4a] px-4 py-3 text-sm font-extrabold text-white shadow-lg transition" href="#main">
+  <a class="skip-link" href="#main">
     Skip to content
   </a>
 
@@ -157,7 +166,10 @@
           <!-- Left Column: Visual/Graphic -->
           <div class="about-visual fade-hidden">
             <div class="about-visual-accent"></div>
-            <img class="profile-image" src="./images/leon_profile.png" alt="Leon Mwangi">
+            <picture>
+              <source srcset="./images/leon_profile.webp" type="image/webp">
+              <img class="profile-image" src="./images/leon_profile.png" alt="Leon Mwangi">
+            </picture>
           </div>
 
           <!-- Right Column: Text & Facts -->
@@ -308,7 +320,7 @@
                 <h4 class="skill-name">VS Code</h4>
                 <p class="skill-desc">
                   IDE configuration, terminal usage, and fast workflows. 
-                  <a href="#setup" class="skill-link" style="color: var(--color-primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 0.5rem;">
+                  <a href="#setup" class="skill-link">
                     See my Extensions 🔌
                   </a>
                 </p>
@@ -467,7 +479,7 @@
               </p>
               <div class="project-actions">
                 <button type="button" class="btn btn-live" data-project="portfolio">
-                  Live Demo
+                  Interactive Demo
                 </button>
                 <a href="https://github.com/leonmwangi/portfolio" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
@@ -496,7 +508,7 @@
               </p>
               <div class="project-actions">
                 <button type="button" class="btn btn-live" data-project="taskly">
-                  Live Demo
+                  Interactive Demo
                 </button>
                 <a href="https://github.com/leonmwangi/taskly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
@@ -525,9 +537,35 @@
               </p>
               <div class="project-actions">
                 <button type="button" class="btn btn-live" data-project="weatherly">
-                  Live Demo
+                  Interactive Demo
                 </button>
                 <a href="https://github.com/leonmwangi/weatherly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 4: The Gilded Plum -->
+          <article class="project-card fade-hidden">
+            <div class="project-thumb-container">
+              <div class="project-thumb theme-newproject">
+                <span class="project-thumb-overlay" aria-hidden="true">🍽️</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Django</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">SQLite</span>
+                <span class="project-tag">REST API</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">The Gilded Plum</h3>
+              <p class="project-desc">
+                A full-stack fine dining restaurant website with a Django backend, reservation & contact management, dynamic menu API, Chef's Table inventory tracking, an interactive gallery, and a staff dashboard for real-time operations.
+              </p>
+              <div class="project-actions">
+                <a href="https://github.com/leonmwangi/the-gilded-plum" class="btn btn-git" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
               </div>
@@ -606,7 +644,7 @@
             <a href="https://github.com/leonmwangi" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <span>GH</span>
             </a>
-            <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/leonmwangi" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <span>LN</span>
             </a>
           </div>
@@ -614,7 +652,7 @@
 
         <!-- Right Column: Interactive Form -->
         <div class="contact-form-container fade-hidden">
-          <form class="contact-form" action="#" method="POST">
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
             <div class="form-group">
               <label for="form-name" class="form-label">Full Name</label>
               <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
@@ -662,7 +700,7 @@
           <a href="https://github.com/leonmwangi" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <span>GH</span>
           </a>
-          <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/leonmwangi" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <span>LN</span>
           </a>
         </div>

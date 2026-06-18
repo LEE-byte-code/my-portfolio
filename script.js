@@ -320,6 +320,7 @@ function initThemeToggle() {
  * FEATURE 10: Interactive Project Playground Modal System
  */
 let isModalOpen = false;
+let previousActiveElement = null;
 
 function initProjectModals() {
   const modal = document.getElementById('projectModal');
@@ -350,19 +351,43 @@ function initProjectModals() {
     if (e.key === 'Escape' && isModalOpen) {
       closeProjectModal();
     }
+    if (e.key === 'Tab' && isModalOpen) {
+      trapFocus(e);
+    }
   });
+}
+
+function trapFocus(e) {
+  const modal = document.getElementById('projectModal');
+  if (!modal) return;
+
+  const focusable = modal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  if (focusable.length === 0) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
 }
 
 function openProjectModal(project) {
   const modal = document.getElementById('projectModal');
   if (!modal) return;
 
+  previousActiveElement = document.activeElement;
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden'; // Lock background scroll
+  document.body.style.overflow = 'hidden';
   isModalOpen = true;
 
-  // Render specific content
   if (project === 'portfolio') {
     renderPortfolioBuilder();
   } else if (project === 'taskly') {
@@ -370,6 +395,11 @@ function openProjectModal(project) {
   } else if (project === 'weatherly') {
     renderWeatherDashboard();
   }
+
+  requestAnimationFrame(() => {
+    const closeBtn = document.getElementById('modalClose');
+    if (closeBtn) closeBtn.focus();
+  });
 }
 
 function closeProjectModal() {
@@ -378,10 +408,14 @@ function closeProjectModal() {
 
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = ''; // Unlock scroll
+  document.body.style.overflow = '';
   isModalOpen = false;
 
-  // Clear modal body shortly after transition completes
+  if (previousActiveElement) {
+    previousActiveElement.focus();
+    previousActiveElement = null;
+  }
+
   setTimeout(() => {
     if (!isModalOpen) {
       const body = document.getElementById('modalBody');
