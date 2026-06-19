@@ -26,19 +26,26 @@
   border-color: var(--color-primary);
 }
 
+.kanban-task-btn:focus-visible,
+.setup-copy-btn:focus-visible,
+.color-swatch-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .kanban-add-btn {
-  background-color: var(--color-primary);
-  color: #000;
+  background: var(--gradient-btn);
+  color: #fff;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.25rem;
-  font-weight: 900;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .kanban-add-btn:hover {
-  background-color: var(--color-primary-hover);
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 
@@ -191,18 +198,18 @@
 }
 
 .weather-search-btn {
-  background-color: var(--color-primary);
-  color: #000;
+  background: var(--gradient-btn);
+  color: #fff;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.25rem;
-  font-weight: 900;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .weather-search-btn:hover {
-  background-color: var(--color-primary-hover);
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 
@@ -305,8 +312,14 @@
 
 .weather-details-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .weather-details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .weather-detail-item {
@@ -372,7 +385,7 @@
 
 .weather-chart-bar {
   width: 16px;
-  background: linear-gradient(to top, var(--color-primary), #00e676);
+  background: linear-gradient(to top, var(--color-primary), #7621B0);
   border-radius: 4px;
   transition: height 0.6s ease;
   height: 0;
@@ -477,18 +490,18 @@
 }
 
 .builder-btn {
-  background-color: var(--color-primary);
-  color: #000;
+  background: var(--gradient-btn);
+  color: #fff;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.25rem;
-  font-weight: 900;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .builder-btn:hover {
-  background-color: var(--color-primary-hover);
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 

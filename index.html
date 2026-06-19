@@ -3,125 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leon Mwangi | Web Developer Portfolio</title>
+  <title>Leon Mwangi | Web Developer</title>
   <meta name="description" content="Portfolio website for Leon Mwangi, a web developer in Nairobi building responsive, accessible websites.">
-  
-  <!-- Open Graph / Social Meta Tags -->
-  <meta property="og:title" content="Leon Mwangi | Web Developer Portfolio">
+  <meta property="og:title" content="Leon Mwangi | Web Developer">
   <meta property="og:description" content="Web developer in Nairobi building clean, responsive websites with strong structure and polished interfaces.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://leonmwangi.dev">
-  <meta property="og:image" content="./images/og-preview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Leon Mwangi | Web Developer Portfolio">
+  <meta name="twitter:title" content="Leon Mwangi | Web Developer">
   <meta name="twitter:description" content="Web developer in Nairobi building clean, responsive websites.">
-  
-  <!-- Fonts -->
+  <meta name="twitter:site" content="@leonmwangi">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/playground.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-
-  <!-- Skip Link for Accessibility -->
-  <a class="skip-link" href="#main">
-    Skip to content
-  </a>
-
-  <!-- Header Section -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#main" class="nav-logo" aria-label="Leon Mwangi Home">
-        <span class="nav-logo-badge">LM</span>
-        <span class="nav-logo-text">Leon Mwangi</span>
-      </a>
-
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#setup">Setup</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
-          <span class="theme-toggle-icon">🔌</span>
-        </button>
-        <a class="nav-cta" href="mailto:leonmwangi595@gmail.com">
-          Email me
-        </a>
-      </div>
-
-      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Main Content Wrapper -->
-  <main id="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <!-- Left Column: Content & CTAs -->
-        <div class="hero-content">
-          <p id="typing-tagline" class="hero-label">Web developer in Nairobi, Kenya</p>
-          <h1 id="hero-title" class="hero-title">
-            Leon Mwangi
-          </h1>
-          <p class="hero-tagline">
-            Am learning to build clean, responsive websites with strong structure, smooth layouts, and the polish that makes a first impression feel intentional.
-          </p>
-
-          <div class="hero-ctas">
-            <a class="btn-primary" href="#projects">
-              View projects
-            </a>
-            <a class="btn-secondary" href="#contact">
-              Start a conversation
-            </a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="wrapper">
+    <div id="nav-placeholder"></div>
+    <main id="main">
+      <!-- HERO -->
+      <section id="hero" class="hero">
+        <div class="hero-inner">
+          <div class="noise-overlay"></div>
+          <div class="hero-heading-wrap">
+            <h1 class="hero-heading">Leon<br>Mwangi</h1>
           </div>
-
-          <!-- Hero Stats -->
-          <div class="hero-stats stagger-container">
-            <div class="hero-stat-card fade-hidden">
-              <div class="hero-stat-title">HTML</div>
-              <div class="hero-stat-desc">Foundations</div>
-            </div>
-            <div class="hero-stat-card fade-hidden">
-              <div class="hero-stat-title">CSS</div>
-              <div class="hero-stat-desc">Interfaces</div>
-            </div>
-            <div class="hero-stat-card fade-hidden">
-              <div class="hero-stat-title">JS</div>
-              <div class="hero-stat-desc">Interactivity</div>
-            </div>
+          <div class="hero-bottom">
+            <p class="hero-tagline">a web developer in nairobi driven by crafting striking and polished digital experiences</p>
+            <a href="#contact" class="btn-contact">Contact Me</a>
           </div>
-        </div>
-
-        <!-- Right Column: Visual Element (Code Editor Card) -->
-        <div class="hero-visual-col">
-          <div class="code-editor-card" aria-hidden="true">
-            <div class="editor-header">
-              <div class="editor-dots">
-                <span class="editor-dot dot-red"></span>
-                <span class="editor-dot dot-yellow"></span>
-                <span class="editor-dot dot-green"></span>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="code-editor-card">
+              <div class="editor-header">
+                <div class="editor-dots">
+                  <span class="editor-dot dot-red"></span>
+                  <span class="editor-dot dot-yellow"></span>
+                  <span class="editor-dot dot-green"></span>
+                </div>
+                <span class="editor-title">leon.js</span>
               </div>
-              <span class="editor-title">leon.js</span>
-            </div>
-            <div class="editor-body">
-              <div class="editor-lines">
-                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
-              </div>
-              <pre class="editor-code"><code><span class="code-keyword">const</span> developer = <span class="code-bracket">{</span>
+              <div class="editor-body">
+                <div class="editor-lines">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</div>
+                <pre class="editor-code"><code><span class="code-keyword">const</span> developer = <span class="code-bracket">{</span>
   name: <span class="code-string">"Leon Mwangi"</span>,
   role: <span class="code-string">"Web Developer"</span>,
   location: <span class="code-string">"Nairobi, Kenya"</span>,
@@ -131,602 +59,419 @@
   status: <span class="code-string">"Available for projects"</span>
 <span class="code-bracket">}</span>;
 
-<span class="code-comment">//Learning to build responsive web...</span>
+<span class="code-comment">// building responsive web experiences</span>
 <span class="code-function">console</span>.log(developer.status);</code></pre>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Focus Areas Section -->
-    <section class="focus-areas" aria-label="Portfolio focus areas">
-      <div class="container focus-grid stagger-container">
-        <div class="focus-item fade-hidden">Responsive layouts</div>
-        <div class="focus-item fade-hidden">Accessible markup</div>
-        <div class="focus-item fade-hidden">Clean visual systems</div>
-        <div class="focus-item highlight fade-hidden">Project-ready habits</div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-header fade-hidden">
-          <div class="section-label">About me</div>
-          <h2 id="about-title" class="section-title">
-            Curious, practical, and serious about improving with every build.
-          </h2>
-          <p class="section-subtitle">
-            I enjoy turning ideas into websites that are clear, easy to use, and polished across screens.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <!-- Left Column: Visual/Graphic -->
-          <div class="about-visual fade-hidden">
-            <div class="about-visual-accent"></div>
-            <picture>
-              <source srcset="./images/leon_profile.webp" type="image/webp">
-              <img class="profile-image" src="./images/leon_profile.png" alt="Leon Mwangi">
-            </picture>
-          </div>
-
-          <!-- Right Column: Text & Facts -->
-          <div class="about-content fade-hidden">
-            <p class="about-text">
-              I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
-            </p>
-            
-            <ul class="about-facts" aria-label="Quick facts">
-              <li class="about-fact-item">
-                <span class="icon" aria-hidden="true">🛰️</span>
-                <span><strong>Location:</strong> Nairobi, Kenya</span>
-              </li>
-              <li class="about-fact-item">
-                <span class="icon" aria-hidden="true">⚙️</span>
-                <span><strong>Role:</strong> Junior Web Developer</span>
-              </li>
-              <li class="about-fact-item">
-                <span class="icon" aria-hidden="true">🚀</span>
-                <span><strong>Status:</strong> Available for Projects</span>
-              </li>
-            </ul>
-
-            <div class="about-actions">
-              <a href="mailto:leonmwangi595@gmail.com?subject=CV%20Request" class="btn-primary">
-                Request CV
-              </a>
+      <!-- ABOUT -->
+      <section id="about" class="about section">
+        <div class="noise-overlay"></div>
+        <div class="container">
+          <h2 class="section-heading" data-reveal>About Me</h2>
+          <div class="about-grid">
+            <div class="about-visual" data-reveal>
+              <div class="about-visual-accent"></div>
+              <picture>
+                <source srcset="./images/leon_profile.webp" type="image/webp">
+                <img class="profile-image" src="./images/leon_profile.png" alt="Leon Mwangi" loading="lazy">
+              </picture>
             </div>
-
-            <!-- Focus Sub-Cards (Preserving original content) -->
-            <div class="about-cards-container stagger-container">
-              <article class="about-card fade-hidden">
-                <div class="about-card-num teal" aria-hidden="true">01</div>
-                <div class="about-card-content">
-                  <h3 class="about-card-title">Structure</h3>
-                  <p class="about-card-desc">Semantic HTML, clear content flow, and accessible page foundations.</p>
+            <div class="about-content" data-reveal>
+              <p class="about-text" data-animate-letters>
+                I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
+              </p>
+              <ul class="about-facts">
+                <li class="about-fact-item">
+                  <span class="fact-icon">&#x1F4CD;</span>
+                  <span><strong>Location:</strong> Nairobi, Kenya</span>
+                </li>
+                <li class="about-fact-item">
+                  <span class="fact-icon">&#x2699;&#xFE0F;</span>
+                  <span><strong>Role:</strong> Web Developer</span>
+                </li>
+                <li class="about-fact-item">
+                  <span class="fact-icon">&#x1F680;</span>
+                  <span><strong>Status:</strong> Available for Projects</span>
+                </li>
+              </ul>
+              <div class="about-cards" data-stagger="0.1">
+                <div class="about-card glass-card" data-reveal>
+                  <span class="about-card-num">01</span>
+                  <div class="about-card-content">
+                    <h3 class="about-card-title">Structure</h3>
+                    <p class="about-card-desc">Semantic HTML, clear content flow, and accessible page foundations.</p>
+                  </div>
                 </div>
-              </article>
-              <article class="about-card fade-hidden">
-                <div class="about-card-num blue" aria-hidden="true">02</div>
-                <div class="about-card-content">
-                  <h3 class="about-card-title">Interface</h3>
-                  <p class="about-card-desc">CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
+                <div class="about-card glass-card" data-reveal>
+                  <span class="about-card-num">02</span>
+                  <div class="about-card-content">
+                    <h3 class="about-card-title">Interface</h3>
+                    <p class="about-card-desc">CSS Grid, Flexbox, spacing systems, hover states, and responsive design.</p>
+                  </div>
                 </div>
-              </article>
-              <article class="about-card fade-hidden">
-                <div class="about-card-num orange" aria-hidden="true">03</div>
-                <div class="about-card-content">
-                  <h3 class="about-card-title">Momentum</h3>
-                  <p class="about-card-desc">Consistent practice, GitHub publishing, and improving through feedback.</p>
+                <div class="about-card glass-card" data-reveal>
+                  <span class="about-card-num">03</span>
+                  <div class="about-card-content">
+                    <h3 class="about-card-title">Momentum</h3>
+                    <p class="about-card-desc">Consistent practice, GitHub publishing, and improving through feedback.</p>
+                  </div>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="code-decor code-decor--about" data-reveal aria-hidden="true">&lt;!-- about: building --&gt;
+&lt;!-- one block at a time --&gt;</div>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <div class="section-header fade-hidden">
-          <div class="section-label">Skills</div>
-          <h2 id="skills-title" class="section-title">
-            The tools I am using to build sharper digital experiences.
-          </h2>
-          <p class="section-subtitle">
-            A growing stack of languages, libraries, and developer tools.
-          </p>
-        </div>
-
-        <div class="skills-container">
-          <!-- Core Skills Group -->
-          <div class="skills-group">
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="noise-overlay"></div>
+        <div class="container">
+          <h2 class="section-heading" data-reveal>Skills</h2>
+          <div class="skills-group" data-reveal>
             <h3 class="skills-group-title">Core Skills</h3>
-            <div class="skills-grid stagger-container">
-              <article class="skill-card fade-hidden">
+            <div class="skills-grid" data-stagger="0.08">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">🏗️</span>
+                  <span class="skill-icon">&#x1F3D7;&#xFE0F;</span>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">HTML5</h4>
                 <p class="skill-desc">Semantic structure, SEO foundations, accessibility standards, and clean page layouts.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="90" aria-label="HTML5 proficiency 90%"></div>
+                  <div class="skill-progress-bar" data-width="90"></div>
                 </div>
               </article>
-
-              <article class="skill-card fade-hidden">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">📐</span>
+                  <span class="skill-icon">&#x1F4D0;</span>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">CSS3</h4>
                 <p class="skill-desc">Responsive grids, flexbox layouts, animations, transitions, and modern spacing systems.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="85" aria-label="CSS3 proficiency 85%"></div>
+                  <div class="skill-progress-bar" data-width="85"></div>
                 </div>
               </article>
-
-              <article class="skill-card fade-hidden">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">⚙️</span>
+                  <span class="skill-icon">&#x2699;&#xFE0F;</span>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">JavaScript</h4>
                 <p class="skill-desc">DOM manipulation, event handling, ES6 syntax, dynamic data integration, and scripting.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="75" aria-label="JavaScript proficiency 75%"></div>
+                  <div class="skill-progress-bar" data-width="75"></div>
                 </div>
               </article>
             </div>
           </div>
-
-          <!-- Tools & Workflow Group -->
-          <div class="skills-group">
-            <h3 class="skills-group-title">Tools & Workflow</h3>
-            <div class="skills-grid stagger-container">
-              <article class="skill-card fade-hidden">
+          <div class="skills-group" data-reveal>
+            <h3 class="skills-group-title">Tools &amp; Workflow</h3>
+            <div class="skills-grid" data-stagger="0.08">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">⛓️</span>
+                  <span class="skill-icon">&#x26D3;&#xFE0F;</span>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">Git</h4>
                 <p class="skill-desc">Version control, branch management, local and remote repository synchronization.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="80" aria-label="Git proficiency 80%"></div>
+                  <div class="skill-progress-bar" data-width="80"></div>
                 </div>
               </article>
-
-              <article class="skill-card fade-hidden">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">💻</span>
+                  <span class="skill-icon">&#x1F4BB;</span>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">GitHub</h4>
                 <p class="skill-desc">Project publishing, hosting, continuous deployment workflows, and issue tracking.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="80" aria-label="GitHub proficiency 80%"></div>
+                  <div class="skill-progress-bar" data-width="80"></div>
                 </div>
               </article>
-
-              <article class="skill-card fade-hidden">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">⌨️</span>
+                  <span class="skill-icon">&#x2328;&#xFE0F;</span>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">VS Code</h4>
-                <p class="skill-desc">
-                  IDE configuration, terminal usage, and fast workflows. 
-                  <a href="#setup" class="skill-link">
-                    See my Extensions 🔌
-                  </a>
-                </p>
+                <p class="skill-desc">IDE configuration, terminal usage, and fast workflows.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="85" aria-label="VS Code proficiency 85%"></div>
+                  <div class="skill-progress-bar" data-width="85"></div>
                 </div>
               </article>
-
-              <article class="skill-card fade-hidden">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">📟</span>
+                  <span class="skill-icon">&#x1F4DF;</span>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">Responsive Design</h4>
                 <p class="skill-desc">Mobile-first engineering, breakpoints, fluid spacing, and flexible layouts across screens.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="85" aria-label="Responsive Design proficiency 85%"></div>
+                  <div class="skill-progress-bar" data-width="85"></div>
                 </div>
               </article>
-
-              <article class="skill-card fade-hidden">
+              <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon" aria-hidden="true">🔧</span>
+                  <span class="skill-icon">&#x1F527;</span>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">Chrome DevTools</h4>
-                <p class="skill-desc">Inspecting layouts, debugging javascript, styling overrides, and testing performance benchmarks.</p>
+                <p class="skill-desc">Inspecting layouts, debugging javascript, styling overrides, and testing performance.</p>
                 <div class="skill-progress-bg">
-                  <div class="skill-progress-bar skill-bar" data-width="70" aria-label="Chrome DevTools proficiency 70%"></div>
+                  <div class="skill-progress-bar" data-width="70"></div>
                 </div>
               </article>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="code-decor code-decor--skills" data-reveal aria-hidden="true">skills: [
+  'HTML5',   'CSS3',
+  'JS',      'Git',
+  'GitHub',  'VS Code',
+  'RWD',     'DevTools'
+];</div>
+      </section>
 
-    <!-- VS Code Setup / Extensions Section -->
-    <section id="setup" aria-labelledby="setup-title">
-      <div class="container">
-        <div class="section-header fade-hidden">
-          <div class="section-label">My Environment</div>
-          <h2 id="setup-title" class="section-title">
-            My VS Code Powerpack
-          </h2>
-          <p class="section-subtitle">
-            The core extension suite I use to write clean code, format layouts, and boost my speed.
-          </p>
-        </div>
-
-        <div class="setup-grid stagger-container">
-          <!-- Card 1: Prettier -->
-          <article class="setup-card fade-hidden" style="--card-accent: var(--color-accent-yellow); --card-accent-opacity: rgba(242, 184, 75, 0.07);">
-            <div class="setup-card-inner">
+      <!-- SETUP -->
+      <section id="setup" class="setup section">
+        <div class="noise-overlay"></div>
+        <div class="container">
+          <h2 class="section-heading" data-reveal>Setup</h2>
+          <p class="section-subtitle">The core extension suite I use to write clean code, format layouts, and boost my speed.</p>
+          <div class="setup-grid" data-stagger="0.12">
+            <article class="setup-card glass-card" data-reveal>
               <div class="setup-card-header">
-                <span class="setup-icon" aria-hidden="true">✨</span>
+                <span class="setup-icon">&#x2728;</span>
                 <span class="setup-pill">Formatting</span>
               </div>
               <h3 class="setup-name">Prettier</h3>
               <p class="setup-desc">An opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules.</p>
               <div class="setup-actions">
                 <div class="setup-meta">
-                  <code class="setup-id" title="Extension ID">esbenp.prettier-vscode</code>
-                  <button class="setup-copy-btn" data-id="esbenp.prettier-vscode" title="Copy installation command" aria-label="Copy installation command for Prettier">
-                    📋 Copy Command
-                  </button>
+                  <code class="setup-id">esbenp.prettier-vscode</code>
+                  <button class="setup-copy-btn" data-id="esbenp.prettier-vscode">Copy</button>
                 </div>
-                <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" rel="noopener noreferrer" class="setup-btn" aria-label="View Prettier on VS Code Marketplace">
-                  Marketplace 🔌
-                </a>
               </div>
-            </div>
-          </article>
-
-          <!-- Card 2: Live Server -->
-          <article class="setup-card fade-hidden" style="--card-accent: var(--color-accent-orange); --card-accent-opacity: rgba(255, 107, 74, 0.07);">
-            <div class="setup-card-inner">
+            </article>
+            <article class="setup-card glass-card" data-reveal>
               <div class="setup-card-header">
-                <span class="setup-icon" aria-hidden="true">⚡</span>
+                <span class="setup-icon">&#x26A1;</span>
                 <span class="setup-pill">Workflow</span>
               </div>
               <h3 class="setup-name">Live Server</h3>
-              <p class="setup-desc">Launches a local development server with a live reload feature for static and dynamic web pages, speeding up visual adjustments.</p>
+              <p class="setup-desc">Launches a local development server with a live reload feature for static and dynamic web pages.</p>
               <div class="setup-actions">
                 <div class="setup-meta">
-                  <code class="setup-id" title="Extension ID">ritwickdey.liveserver</code>
-                  <button class="setup-copy-btn" data-id="ritwickdey.liveserver" title="Copy installation command" aria-label="Copy installation command for Live Server">
-                    📋 Copy Command
-                  </button>
+                  <code class="setup-id">ritwickdey.liveserver</code>
+                  <button class="setup-copy-btn" data-id="ritwickdey.liveserver">Copy</button>
                 </div>
-                <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noopener noreferrer" class="setup-btn" aria-label="View Live Server on VS Code Marketplace">
-                  Marketplace 🔌
-                </a>
               </div>
-            </div>
-          </article>
-
-          <!-- Card 3: JavaScript Snippets -->
-          <article class="setup-card fade-hidden" style="--card-accent: #3b82f6; --card-accent-opacity: rgba(59, 130, 246, 0.07);">
-            <div class="setup-card-inner">
+            </article>
+            <article class="setup-card glass-card" data-reveal>
               <div class="setup-card-header">
-                <span class="setup-icon" aria-hidden="true">⚙️</span>
-                <span class="setup-pill">Code Snippets</span>
+                <span class="setup-icon">&#x2699;&#xFE0F;</span>
+                <span class="setup-pill">Snippets</span>
               </div>
-              <h3 class="setup-name">JavaScript Snippets</h3>
-              <p class="setup-desc">Equips the editor with standard code snippets for modern JavaScript in ES6 syntax, helping write logic swiftly and correctly.</p>
+              <h3 class="setup-name">JS Snippets</h3>
+              <p class="setup-desc">Equips the editor with standard code snippets for modern JavaScript in ES6 syntax, helping write logic swiftly.</p>
               <div class="setup-actions">
                 <div class="setup-meta">
-                  <code class="setup-id" title="xabikos.javascriptsnippets">xabikos.javascriptsnippets</code>
-                  <button class="setup-copy-btn" data-id="xabikos.javascriptsnippets" title="Copy installation command" aria-label="Copy installation command for JavaScript Snippets">
-                    📋 Copy Command
-                  </button>
+                  <code class="setup-id">xabikos.javascriptsnippets</code>
+                  <button class="setup-copy-btn" data-id="xabikos.javascriptsnippets">Copy</button>
                 </div>
-                <a href="https://marketplace.visualstudio.com/items?itemName=xabikos.javascriptsnippets" target="_blank" rel="noopener noreferrer" class="setup-btn" aria-label="View JavaScript Snippets on VS Code Marketplace">
-                  Marketplace 🔌
-                </a>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="code-decor code-decor--setup" data-reveal aria-hidden="true">"extensions": [
+  "prettier",
+  "live-server",
+  "js-snippets"
+]</div>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-header fade-hidden">
-          <div class="section-label">Projects</div>
-          <h2 id="projects-title" class="section-title">
-            Recent work built with focus, clarity, and a growing frontend toolkit.
-          </h2>
-          <p class="section-subtitle">
-            A selection of builds showcasing modern UI development, layouts, and scripting.
-          </p>
-        </div>
-
-        <div class="projects-grid stagger-container">
-          <!-- Card 1 (Featured Portfolio) -->
-          <article class="project-card fade-hidden">
-            <span class="project-featured-badge">Featured</span>
-            <div class="project-thumb-container">
+      <!-- PROJECTS -->
+      <section id="projects" class="projects section">
+        <div class="noise-overlay"></div>
+        <div class="container">
+          <h2 class="section-heading" data-reveal>Projects</h2>
+          <p class="section-subtitle">Recent work built with focus, clarity, and a growing frontend toolkit.</p>
+          <div class="projects-grid" data-stagger="0.12">
+            <article class="project-card glass-card" data-reveal>
+              <span class="project-badge">Featured</span>
               <div class="project-thumb theme-portfolio">
-                <span class="project-thumb-overlay" aria-hidden="true">🏗️</span>
+                <span class="project-thumb-icon">&#x1F3D7;&#xFE0F;</span>
               </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">Tailwind</span>
-                <span class="project-tag">JavaScript</span>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">HTML5</span>
+                  <span class="project-tag">CSS3</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+                <h3 class="project-name">Personal Portfolio Website</h3>
+                <p class="project-desc">A fully responsive, modern developer portfolio with high-performance scroll transitions, typing animations, mobile navigation, and a dynamic contact form.</p>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-live" data-project="portfolio">Interactive Demo</button>
+                  <a href="https://github.com/leonmwangi/portfolio" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-              <h3 class="project-title">Personal Portfolio Website</h3>
-              <p class="project-desc">
-                A fully responsive, modern developer portfolio utilizing Tailwind CSS and CSS Grid. Features high-performance scroll transitions, typing animations, mobile hamburger navigation, and a dynamic contact portal.
-              </p>
-              <div class="project-actions">
-                <button type="button" class="btn btn-live" data-project="portfolio">
-                  Interactive Demo
-                </button>
-                <a href="https://github.com/leonmwangi/portfolio" class="btn btn-git" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 (Task Management App - Mock) -->
-          <article class="project-card fade-hidden">
-            <div class="project-thumb-container">
+            </article>
+            <article class="project-card glass-card" data-reveal>
               <div class="project-thumb theme-tasks">
-                <span class="project-thumb-overlay" aria-hidden="true">⚙️</span>
+                <span class="project-thumb-icon">&#x2699;&#xFE0F;</span>
               </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">LocalStorage</span>
-                <span class="project-tag">CSS Grid</span>
-                <span class="project-tag">Drag-and-Drop</span>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">LocalStorage</span>
+                  <span class="project-tag">CSS Grid</span>
+                </div>
+                <h3 class="project-name">Taskly - Kanban Dashboard</h3>
+                <p class="project-desc">A lightweight productivity dashboard for managing projects with local persistence, task sorting, priority labelling, and deadline countdowns.</p>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-live" data-project="taskly">Interactive Demo</button>
+                  <a href="https://github.com/leonmwangi/taskly" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-              <h3 class="project-title">Taskly - Interactive Kanban Dashboard</h3>
-              <p class="project-desc">
-                A lightweight productivity dashboard for managing projects. Supports local persistence, task column sorting, priority labelling, deadline countdowns, and a responsive mobile layout.
-              </p>
-              <div class="project-actions">
-                <button type="button" class="btn btn-live" data-project="taskly">
-                  Interactive Demo
-                </button>
-                <a href="https://github.com/leonmwangi/taskly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 (Weather Dashboard - Mock) -->
-          <article class="project-card fade-hidden">
-            <div class="project-thumb-container">
+            </article>
+            <article class="project-card glass-card" data-reveal>
               <div class="project-thumb theme-weather">
-                <span class="project-thumb-overlay" aria-hidden="true">📡</span>
+                <span class="project-thumb-icon">&#x1F4E1;</span>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">API</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">CSS Flexbox</span>
+                </div>
+                <h3 class="project-name">Weatherly - Forecast Portal</h3>
+                <p class="project-desc">An interactive weather application with real-time data, forecast charts, city search, and dynamic card layouts.</p>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-live" data-project="weatherly">Interactive Demo</button>
+                  <a href="https://github.com/leonmwangi/weatherly" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card glass-card" data-reveal>
+              <div class="project-thumb theme-plum">
+                <span class="project-thumb-icon">&#x1F37D;&#xFE0F;</span>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Django</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">SQLite</span>
+                  <span class="project-tag">REST API</span>
+                </div>
+                <h3 class="project-name">The Gilded Plum</h3>
+                <p class="project-desc">A full-stack fine dining restaurant website with Django backend, reservation management, dynamic menu API, and interactive gallery.</p>
+                <div class="project-actions">
+                  <a href="https://github.com/leonmwangi/the-gilded-plum" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="code-decor code-decor--projects" data-reveal aria-hidden="true">git push origin
+  feat/portfolio
+  feat/taskly
+  feat/weatherly</div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact section">
+        <div class="noise-overlay"></div>
+        <div class="container">
+          <h2 class="section-heading" data-reveal>Contact</h2>
+          <div class="contact-grid">
+            <div class="contact-info" data-reveal>
+              <h3 class="contact-title">Let&apos;s work together</h3>
+              <p class="contact-desc">I am open to internships, collaborations, freelance projects, and conversations about building better websites.</p>
+              <ul class="contact-details">
+                <li class="contact-detail-item">
+                  <span class="contact-detail-icon">&#x1F4CD;</span>
+                  <div>
+                    <span class="contact-detail-label">Location</span>
+                    <span class="contact-detail-value">Nairobi, Kenya</span>
+                  </div>
+                </li>
+                <li class="contact-detail-item">
+                  <span class="contact-detail-icon">&#x1F4E9;</span>
+                  <div>
+                    <span class="contact-detail-label">Email</span>
+                    <a href="mailto:leonmwangi595@gmail.com" class="contact-detail-value link">leonmwangi595@gmail.com</a>
+                  </div>
+                </li>
+                <li class="contact-detail-item">
+                  <span class="contact-detail-icon">&#x1F680;</span>
+                  <div>
+                    <span class="contact-detail-label">Response</span>
+                    <span class="contact-detail-value">Within 24 hours</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="contact-socials">
+                <a href="https://github.com/leonmwangi" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+                <a href="https://linkedin.com/in/leonmwangi" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">LN</a>
               </div>
             </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">API Integration</span>
-                <span class="project-tag">ChartJS</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">CSS Flexbox</span>
+            <form class="contact-form" data-reveal id="contactForm">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Name</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Your name" required>
               </div>
-              <h3 class="project-title">Weatherly - Climate Forecast Portal</h3>
-              <p class="project-desc">
-                An interactive weather application fetching real-time meteorological data via OpenWeatherMap API. Displays forecast graphs via Chart.js, city search auto-completion, and dynamic weather-based card layouts.
-              </p>
-              <div class="project-actions">
-                <button type="button" class="btn btn-live" data-project="weatherly">
-                  Interactive Demo
-                </button>
-                <a href="https://github.com/leonmwangi/weatherly" class="btn btn-git" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="your@email.com" required>
               </div>
-            </div>
-          </article>
-          <!-- Card 4: The Gilded Plum -->
-          <article class="project-card fade-hidden">
-            <div class="project-thumb-container">
-              <div class="project-thumb theme-newproject">
-                <span class="project-thumb-overlay" aria-hidden="true">🍽️</span>
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="What is this about?" required>
               </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="project-tag">Django</span>
-                <span class="project-tag">Python</span>
-                <span class="project-tag">SQLite</span>
-                <span class="project-tag">REST API</span>
-                <span class="project-tag">JavaScript</span>
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
               </div>
-              <h3 class="project-title">The Gilded Plum</h3>
-              <p class="project-desc">
-                A full-stack fine dining restaurant website with a Django backend, reservation & contact management, dynamic menu API, Chef's Table inventory tracking, an interactive gallery, and a staff dashboard for real-time operations.
-              </p>
-              <div class="project-actions">
-                <a href="https://github.com/leonmwangi/the-gilded-plum" class="btn btn-git" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-          <!-- Placeholder Project Card (Commented out)
-          <article class="project-card fade-hidden">
-  <div class="project-thumb-container">
-    <div class="project-thumb theme-newproject">
-      <span class="project-thumb-overlay" aria-hidden="true">🚀</span>
-    </div>
+              <button type="submit" id="formSubmitBtn" class="btn-contact btn-contact--form">Send Message</button>
+              <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+        <div class="code-decor code-decor--contact" data-reveal aria-hidden="true">email: leon@
+  dev.me
+
+subject:
+  "Let's build
+   together"</div>
+      </section>
+
+    </main>
+    <div id="footer-placeholder"></div>
   </div>
-  <div class="project-content">
-    <div class="project-tags">
-      <span class="project-tag">HTML5</span>
-      <span class="project-tag">CSS3</span>
-      <span class="project-tag">JavaScript</span>
-    </div>
-    <h3 class="project-title">Your Project Name</h3>
-    <p class="project-desc">
-      A short description of what your project does and what it demonstrates.
-    </p>
-    <div class="project-actions">
-      <a href="https://your-live-link.com" class="btn btn-live" target="_blank" rel="noopener noreferrer">
-        Live Demo
-      </a>
-      <a href="https://github.com/LEE-byte-code/your-repo" class="btn btn-git" target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>
-    </div>
-  </div>
-</article>
-          -->
-        </div>
-      </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <!-- Left Column: Info Panel -->
-        <div class="contact-info fade-hidden">
-          <div class="contact-info-header">
-            <div class="section-label">Contact</div>
-            <h3 id="contact-title">Let's work together.</h3>
-            <p>
-              I am open to internships, collaborations, freelance projects, and conversations about building better websites.
-            </p>
-          </div>
-
-          <div class="contact-rows">
-            <div class="contact-row">
-              <div class="contact-row-icon" aria-hidden="true">🛰️</div>
-              <div class="contact-row-text">
-                <span class="contact-row-label">Location</span>
-                <span class="contact-row-value">Nairobi, Kenya</span>
-              </div>
-            </div>
-            <div class="contact-row">
-              <div class="contact-row-icon" aria-hidden="true">📟</div>
-              <div class="contact-row-text">
-                <span class="contact-row-label">Email</span>
-                <a href="mailto:leonmwangi595@gmail.com" class="contact-row-value">leonmwangi595@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-row">
-              <div class="contact-row-icon" aria-hidden="true">🚀</div>
-              <div class="contact-row-text">
-                <span class="contact-row-label">Response Time</span>
-                <span class="contact-row-value">Within 24 hours</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-socials">
-            <a href="https://github.com/leonmwangi" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-              <span>GH</span>
-            </a>
-            <a href="https://linkedin.com/in/leonmwangi" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <span>LN</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive Form -->
-        <div class="contact-form-container fade-hidden">
-          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-            <div class="form-group">
-              <label for="form-name" class="form-label">Full Name</label>
-              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="form-email" class="form-label">Email Address</label>
-              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="form-subject" class="form-label">Subject</label>
-              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="How can I help you?" required>
-            </div>
-            <div class="form-group">
-              <label for="form-message" class="form-label">Message</label>
-              <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
-            </div>
-            <button type="submit" class="form-submit-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="container footer-flex">
-      <!-- Left: Name & Tagline -->
-      <div class="footer-brand">
-        <p class="footer-name">Leon Mwangi</p>
-        <p class="footer-tagline">Building the web from Nairobi 🇰🇪</p>
-      </div>
-
-      <!-- Center: Navigation Row -->
-      <ul class="footer-nav" aria-label="Footer navigation">
-        <li><a href="#about" class="footer-nav-link">About</a></li>
-        <li><a href="#skills" class="footer-nav-link">Skills</a></li>
-        <li><a href="#projects" class="footer-nav-link">Projects</a></li>
-        <li><a href="#contact" class="footer-nav-link">Contact</a></li>
-      </ul>
-
-      <!-- Right: Socials & Back to top -->
-      <div class="footer-right">
-        <div class="footer-socials">
-          <a href="https://github.com/leonmwangi" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-            <span>GH</span>
-          </a>
-          <a href="https://linkedin.com/in/leonmwangi" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-            <span>LN</span>
-          </a>
-        </div>
-        <a href="#main" class="footer-back-to-top" aria-label="Back to top of the page">
-          Back to top ⬆️
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Dynamic Project Modal Overlay -->
-  <div id="projectModal" class="modal-overlay" aria-hidden="true" role="dialog">
+  <div id="projectModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
     <div class="modal-container">
       <div class="modal-header">
-        <h2 id="modalTitle" class="modal-title">Project Demo</h2>
-        <button id="modalClose" class="modal-close-btn" aria-label="Close interactive demo">&times;</button>
+        <h2 id="modalTitle" class="modal-title">Interactive Demo</h2>
+        <button id="modalClose" class="modal-close-btn" aria-label="Close">&times;</button>
       </div>
-      <div class="modal-body" id="modalBody">
-        <!-- Interactive content injected dynamically -->
-      </div>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">⬆️</button>
-
-  <script src="script.js"></script>
-
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+  <script src="js/utils.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
