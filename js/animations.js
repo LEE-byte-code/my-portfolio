@@ -84,7 +84,8 @@ function initAnimatedLetters() {
   el.innerHTML = '';
   const spans = chars.map((c) => {
     const span = document.createElement('span');
-    span.textContent = c === ' ' ? '\u00A0' : c;
+    span.textContent = c;
+    if (c === ' ') span.style.display = 'inline';
     span.style.opacity = '0.2';
     el.appendChild(span);
     return span;
