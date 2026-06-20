@@ -34,7 +34,6 @@
             <h1 class="hero-heading">Leon<br>Mwangi</h1>
           </div>
           <div class="hero-bottom">
-            <p class="hero-tagline">a web developer in nairobi driven by crafting striking and polished digital experiences</p>
             <a href="#contact" class="btn-contact">Contact Me</a>
           </div>
           <div class="hero-visual" aria-hidden="true">
@@ -84,20 +83,30 @@
               <p class="about-text" data-animate-letters>
                 I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
               </p>
-              <ul class="about-facts">
-                <li class="about-fact-item">
-                  <span class="fact-icon">&#x1F4CD;</span>
-                  <span><strong>Location:</strong> Nairobi, Kenya</span>
-                </li>
-                <li class="about-fact-item">
-                  <span class="fact-icon">&#x2699;&#xFE0F;</span>
-                  <span><strong>Role:</strong> Web Developer</span>
-                </li>
-                <li class="about-fact-item">
-                  <span class="fact-icon">&#x1F680;</span>
-                  <span><strong>Status:</strong> Available for Projects</span>
-                </li>
-              </ul>
+              <div class="about-editor">
+                <div class="code-editor-card">
+                  <div class="editor-header">
+                    <div class="editor-dots">
+                      <span class="editor-dot dot-red"></span>
+                      <span class="editor-dot dot-yellow"></span>
+                      <span class="editor-dot dot-green"></span>
+                    </div>
+                    <span class="editor-title">about.js</span>
+                  </div>
+                  <div class="editor-body">
+                    <div class="editor-lines">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</div>
+                    <pre class="editor-code"><code><span class="code-keyword">const</span> about = <span class="code-bracket">{</span>
+  name: <span class="code-string">"Leon Mwangi"</span>,
+  role: <span class="code-string">"Web Developer"</span>,
+  location: <span class="code-string">"Nairobi, Kenya"</span>,
+  status: <span class="code-string">"Available for projects"</span>
+<span class="code-bracket">}</span>;
+
+<span class="code-comment">// building one block at a time</span>
+<span class="code-function">console</span>.log(about.status);</code></pre>
+                  </div>
+                </div>
+              </div>
               <div class="about-cards" data-stagger="0.1">
                 <div class="about-card glass-card" data-reveal>
                   <span class="about-card-num">01</span>
