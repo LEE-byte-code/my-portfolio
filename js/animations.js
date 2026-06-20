@@ -31,30 +31,6 @@ function initScrollReveal() {
   });
 }
 
-function initTypingAnimation() {
-  const el = document.querySelector('.hero-tagline');
-  if (!el) return;
-
-  const text = el.textContent.trim();
-  el.textContent = '';
-
-  const cursor = document.createElement('span');
-  cursor.className = 'typing-cursor';
-  cursor.textContent = '|';
-  el.appendChild(cursor);
-
-  let i = 0;
-  let typingInterval = setInterval(() => {
-    if (i < text.length) {
-      cursor.insertAdjacentText('beforebegin', text.charAt(i));
-      i++;
-    } else {
-      clearInterval(typingInterval);
-      setTimeout(() => { if (cursor.parentNode) cursor.remove(); }, 3000);
-    }
-  }, 30);
-}
-
 function initSkillBars() {
   const bars = document.querySelectorAll('.skill-progress-bar');
   const section = document.getElementById('skills');

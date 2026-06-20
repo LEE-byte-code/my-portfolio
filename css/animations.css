@@ -62,3 +62,86 @@
 .skill-progress-bar.animated {
   width: var(--target-width, 0%);
 }
+
+/* ═══════════════════════════════════════════
+   Animated Background — floating cubes + particles
+   ═══════════════════════════════════════════ */
+
+/* ---- container: sits above grid overlay, below noise & content ---- */
+.hero-bg-anim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero::before {
+  z-index: 1 !important;
+}
+
+.hero .noise-overlay {
+  z-index: 3 !important;
+}
+
+.hero .hero-inner {
+  position: relative;
+  z-index: 4;
+}
+
+/* ---- particle canvas ---- */
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- parallax layer ---- */
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  will-change: transform;
+}
+
+.cubes-layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* ---- individual cube ---- */
+.bg-cube {
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  pointer-events: none;
+}
+
+.bg-cube-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+}
+
+/* ---- float keyframes ---- */
+@keyframes cube-float-1 {
+  0%   { transform: translate(0,0) rotateX(0deg) rotateY(0deg); }
+  25%  { transform: translate(30px,-20px) rotateX(5deg) rotateY(8deg); }
+  50%  { transform: translate(-15px,25px) rotateX(-3deg) rotateY(-5deg); }
+  75%  { transform: translate(20px,-15px) rotateX(4deg) rotateY(-3deg); }
+  100% { transform: translate(0,0) rotateX(0deg) rotateY(0deg); }
+}
+@keyframes cube-float-2 {
+  0%   { transform: translate(0,0) rotateX(0deg) rotateY(0deg); }
+  25%  { transform: translate(-25px,-15px) rotateX(-4deg) rotateY(-6deg); }
+  50%  { transform: translate(30px,20px) rotateX(3deg) rotateY(5deg); }
+  75%  { transform: translate(-20px,25px) rotateX(-5deg) rotateY(4deg); }
+  100% { transform: translate(0,0) rotateX(0deg) rotateY(0deg); }
+}
+@keyframes cube-float-3 {
+  0%   { transform: translate(0,0) rotateX(0deg) rotateY(0deg) scale(1); }
+  33%  { transform: translate(-30px,-25px) rotateX(6deg) rotateY(-4deg) scale(1.02); }
+  66%  { transform: translate(25px,30px) rotateX(-4deg) rotateY(6deg) scale(0.98); }
+  100% { transform: translate(0,0) rotateX(0deg) rotateY(0deg) scale(1); }
+}

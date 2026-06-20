@@ -805,138 +805,6 @@
 }
 
 /* ===========================
-   SETUP
-   =========================== */
-
-.setup-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 640px) {
-  .setup-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .setup-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.setup-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
-}
-
-.setup-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-border-hover);
-}
-
-.setup-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-.setup-icon {
-  font-size: 1.75rem;
-}
-
-.setup-pill {
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  opacity: 0.7;
-}
-
-.setup-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: 0.75rem;
-}
-
-.setup-desc {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: var(--color-text);
-  opacity: 0.6;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.setup-actions {
-  border-top: 1px solid var(--color-border);
-  padding-top: 1rem;
-  margin-top: auto;
-}
-
-.setup-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.setup-id {
-  font-family: 'Consolas', 'Courier New', monospace;
-  font-size: 0.7rem;
-  color: var(--color-text);
-  opacity: 0.5;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid var(--color-border);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 60%;
-}
-
-.setup-copy-btn {
-  background: transparent;
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  opacity: 0.7;
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  font-family: var(--font-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.setup-copy-btn:hover {
-  opacity: 1;
-  border-color: var(--color-border-hover);
-}
-
-.setup-copy-btn.copied {
-  opacity: 1;
-  color: #00bfa5;
-  border-color: #00bfa5;
-}
-
-/* ===========================
    PROJECTS
    =========================== */
 
@@ -1289,18 +1157,6 @@
 }
 
 /* ===========================
-   GLASS CARD (for modals)
-   =========================== */
-
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-}
-
-/* ===========================
    FOOTER
    =========================== */
 
@@ -1572,11 +1428,6 @@
   left: 1.5rem;
 }
 
-.code-decor--setup {
-  top: 5rem;
-  left: 1.5rem;
-}
-
 .code-decor--projects {
   bottom: 3rem;
   right: 1.5rem;
@@ -1611,11 +1462,6 @@
 
   .code-decor--skills {
     bottom: 5rem;
-    left: 3rem;
-  }
-
-  .code-decor--setup {
-    top: 7rem;
     left: 3rem;
   }
 
@@ -1685,13 +1531,6 @@
   .skill-card { padding: 1.25rem; }
   .skill-name { font-size: 1rem; }
   .skill-desc { font-size: 0.8rem; }
-  .setup-grid { gap: 1rem; }
-  .setup-card { padding: 1.25rem; }
-  .setup-name { font-size: 1rem; }
-  .setup-desc { font-size: 0.8rem; }
-  .setup-meta { flex-direction: column; align-items: stretch; gap: 0.5rem; }
-  .setup-id { max-width: 100%; width: 100%; font-size: 0.65rem; }
-  .setup-copy-btn { width: 100%; text-align: center; }
   .projects-grid { gap: 1rem; }
   .project-content { padding: 1rem; }
   .project-name { font-size: 1rem; }
@@ -1731,9 +1570,6 @@
   .skill-card { padding: 0.875rem; }
   .skill-name { font-size: 0.9rem; }
   .skill-desc { font-size: 0.75rem; }
-  .setup-card { padding: 0.875rem; }
-  .setup-name { font-size: 0.9rem; }
-  .setup-desc { font-size: 0.75rem; }
   .project-thumb { height: 130px; }
   .project-content { padding: 0.75rem; }
   .project-name { font-size: 0.9rem; }

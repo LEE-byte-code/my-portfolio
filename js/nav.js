@@ -1,18 +1,3 @@
-async function initNavFooter() {
-  try {
-    const [navRes, footerRes] = await Promise.all([
-      fetch('nav.html'),
-      fetch('footer.html')
-    ]);
-    const navHtml = await navRes.text();
-    const footerHtml = await footerRes.text();
-    const navEl = document.getElementById('nav-placeholder');
-    const footerEl = document.getElementById('footer-placeholder');
-    if (navEl) navEl.innerHTML = navHtml;
-    if (footerEl) footerEl.innerHTML = footerHtml;
-  } catch {}
-}
-
 function initNavbar() {
   const header = document.querySelector('.site-header');
   if (!header) return;

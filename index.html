@@ -24,10 +24,32 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="wrapper">
-    <div id="nav-placeholder"></div>
+    <header class="site-header">
+  <div class="header-inner">
+    <a href="#main" class="logo" aria-label="Leon Mwangi Home">LM</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link" href="#hero">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</header>
     <main id="main">
       <!-- HERO -->
       <section id="hero" class="hero">
+        <div id="hero-bg-anim" class="hero-bg-anim">
+          <canvas id="particle-canvas"></canvas>
+          <div class="parallax-layer">
+            <div class="cubes-layer"></div>
+          </div>
+        </div>
         <div class="hero-inner">
           <div class="noise-overlay"></div>
           <div class="hero-heading-wrap">
@@ -363,7 +385,19 @@ subject:
       </section>
 
     </main>
-    <div id="footer-placeholder"></div>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-name">Leon Mwangi</p>
+    <p class="footer-tagline">Building the web from Nairobi &#x1F1F0;&#x1F1EA;</p>
+    <div class="footer-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
   </div>
 
   <div id="projectModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
@@ -381,6 +415,7 @@ subject:
   <script src="js/nav.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/modals.js"></script>
+  <script src="js/background-anim.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

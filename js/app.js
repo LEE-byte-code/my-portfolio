@@ -36,31 +36,15 @@ function initContactForm() {
   });
 }
 
-function initSetupCopy() {
-  document.querySelectorAll('.setup-copy-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.getAttribute('data-id');
-      navigator.clipboard.writeText('code --install-extension ' + id).then(() => {
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
-      }).catch(() => {});
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-  await initNavFooter();
+document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initHamburger();
   initSmoothScroll();
   initScrollReveal();
-  initTypingAnimation();
   initActiveNav();
   initSkillBars();
   initBackToTop();
   initProjectModals();
-  initSetupCopy();
   initContactForm();
   initAnimatedLetters();
   initCursor();
