@@ -302,7 +302,7 @@
 
 @media (min-width: 640px) {
   .hero-visual {
-    width: clamp(160px, 22vw, 240px);
+    width: clamp(180px, 24vw, 280px);
     top: 5rem;
     right: 2rem;
   }
@@ -1639,54 +1639,45 @@
    MOBILE RESPONSIVE
    =========================== */
 
-/* ≤900px — heading left, code badge right (side by side, no overlap) */
+/* ≤900px — flexbox column, everything stacks naturally */
 @media (max-width: 900px) {
   .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-      "heading visual"
-      "bottom  bottom";
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     min-height: 100dvh;
     min-height: 100svh;
     padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem 1.25rem;
   }
-  .hero-visual {
-    position: static;
-    grid-area: visual;
-    justify-self: end;
-    align-self: start;
-    width: min(32vw, 150px);
-  }
   .hero-heading-wrap {
-    grid-area: heading;
-    margin-top: 0;
+    margin-top: auto;
     padding-top: 0;
-    align-self: center;
   }
   .hero-heading {
-    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-size: clamp(6rem, 18vw, 12rem);
     max-width: none;
   }
+  .hero-visual {
+    position: static;
+    align-self: flex-end;
+    width: min(42vw, 220px);
+  }
   .hero-bottom {
-    grid-area: bottom;
+    margin-top: auto;
     padding-bottom: 1rem;
   }
   .hero-tagline {
-    order: -1;
-    font-size: clamp(0.7rem, 2.2vw, 0.95rem);
+    font-size: clamp(0.75rem, 2.4vw, 1rem);
   }
   .code-editor-card {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
     border-radius: 8px;
   }
-  .editor-body { padding: 0.5rem; }
-  .editor-header { padding: 0.35rem 0.6rem; }
-  .editor-dot { width: 6px; height: 6px; }
-  .editor-title { font-size: 0.5rem; }
-  .editor-lines { font-size: 0.55rem; padding-right: 0.5rem; }
+  .editor-body { padding: 0.6rem; }
+  .editor-header { padding: 0.4rem 0.7rem; }
+  .editor-dot { width: 7px; height: 7px; }
+  .editor-title { font-size: 0.55rem; }
+  .editor-lines { font-size: 0.6rem; padding-right: 0.6rem; }
 
   .section { padding: 3rem 0; }
   .about { min-height: 0; padding: 3rem 0; }
@@ -1733,15 +1724,15 @@
 /* ≤600px */
 @media (max-width: 600px) {
   .hero-inner { padding: max(1rem, env(safe-area-inset-top)) 1rem 1rem; gap: 0.5rem; }
-  .hero-visual { width: min(30vw, 130px); }
-  .hero-heading { font-size: clamp(2.8rem, 11vw, 4.5rem); max-width: none; }
-  .hero-tagline { font-size: clamp(0.65rem, 2.5vw, 0.85rem); }
-  .code-editor-card { font-size: 0.48rem; border-radius: 6px; }
-  .editor-body { padding: 0.35rem; }
-  .editor-header { padding: 0.25rem 0.4rem; }
-  .editor-dot { width: 5px; height: 5px; }
-  .editor-title { font-size: 0.4rem; }
-  .editor-lines { font-size: 0.45rem; padding-right: 0.3rem; }
+  .hero-visual { width: min(40vw, 190px); }
+  .hero-heading { font-size: clamp(5rem, 18vw, 9rem); max-width: none; }
+  .hero-tagline { font-size: clamp(0.7rem, 2.6vw, 0.9rem); }
+  .code-editor-card { font-size: 0.55rem; border-radius: 6px; }
+  .editor-body { padding: 0.45rem; }
+  .editor-header { padding: 0.3rem 0.5rem; }
+  .editor-dot { width: 6px; height: 6px; }
+  .editor-title { font-size: 0.45rem; }
+  .editor-lines { font-size: 0.5rem; padding-right: 0.4rem; }
   .about { padding: 2.5rem 0; }
   .about-grid { gap: 2rem; }
   .about-text { font-size: 0.9rem; line-height: 1.8; }
@@ -1770,15 +1761,15 @@
 /* ≤400px */
 @media (max-width: 400px) {
   .hero-inner { padding: max(0.75rem, env(safe-area-inset-top)) 0.85rem 0.85rem; }
-  .hero-visual { width: min(28vw, 110px); }
-  .hero-heading { font-size: clamp(2.2rem, 10vw, 3rem); max-width: none; }
-  .hero-tagline { font-size: clamp(0.55rem, 2.2vw, 0.75rem); }
-  .code-editor-card { font-size: 0.4rem; border-radius: 4px; }
-  .editor-body { padding: 0.25rem; }
-  .editor-header { padding: 0.2rem 0.3rem; }
-  .editor-dot { width: 4px; height: 4px; }
-  .editor-title { font-size: 0.32rem; }
-  .editor-lines { font-size: 0.38rem; padding-right: 0.25rem; }
+  .hero-visual { width: min(38vw, 160px); }
+  .hero-heading { font-size: clamp(4rem, 18vw, 7rem); max-width: none; }
+  .hero-tagline { font-size: clamp(0.6rem, 2.5vw, 0.8rem); }
+  .code-editor-card { font-size: 0.48rem; border-radius: 4px; }
+  .editor-body { padding: 0.35rem; }
+  .editor-header { padding: 0.25rem 0.4rem; }
+  .editor-dot { width: 5px; height: 5px; }
+  .editor-title { font-size: 0.38rem; }
+  .editor-lines { font-size: 0.42rem; padding-right: 0.3rem; }
   .about-text { font-size: 0.85rem; line-height: 1.8; }
   .about-card { padding: 0.85rem; }
   .about-card-desc { font-size: 0.8rem; line-height: 1.6; }
