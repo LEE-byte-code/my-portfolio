@@ -209,6 +209,7 @@
 
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   position: relative;
@@ -222,6 +223,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 5rem 1.5rem 2rem;
   position: relative;
 }

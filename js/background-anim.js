@@ -145,10 +145,19 @@
     var layer = container.querySelector('.parallax-layer');
     if (!layer) return;
 
-    document.addEventListener('mousemove', function (e) {
+    function handleMove(clientX, clientY) {
       var rect = container.getBoundingClientRect();
-      mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-      mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      mouseX = ((clientX - rect.left) / rect.width - 0.5) * 2;
+      mouseY = ((clientY - rect.top) / rect.height - 0.5) * 2;
+    }
+
+    document.addEventListener('mousemove', function (e) {
+      handleMove(e.clientX, e.clientY);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      var t = e.touches[0];
+      if (t) handleMove(t.clientX, t.clientY);
     }, { passive: true });
 
     function tick() {
