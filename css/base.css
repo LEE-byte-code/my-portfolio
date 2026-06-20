@@ -6,7 +6,8 @@
   --color-text-muted: rgba(225, 224, 204, 0.5);
   --color-border: rgba(225, 224, 204, 0.12);
   --color-border-hover: rgba(225, 224, 204, 0.25);
-  --gradient-text: linear-gradient(180deg, #8a8f7a 0%, #DEDBC8 60%, #f5f3e6 100%);
+  --gradient-text: linear-gradient(135deg, #8a8f7a 0%, #DEDBC8 30%, #f5f3e6 50%, #DEDBC8 70%, #8a8f7a 100%);
+  --gradient-text-size: 300% 300%;
   --font-primary: 'Kanit', 'Inter', sans-serif;
   --font-body: 'Inter', 'Kanit', sans-serif;
   --transition-fast: 0.2s ease;
@@ -149,10 +150,18 @@ section[id] {
 
 .hero-heading {
   background: var(--gradient-text);
+  background-size: var(--gradient-text-size);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 60px rgba(222, 219, 200, 0.08)) drop-shadow(0 0 120px rgba(222, 219, 200, 0.04));
+  animation: gradientShift 8s ease infinite;
+  filter: drop-shadow(0 0 80px rgba(222, 219, 200, 0.15)) drop-shadow(0 0 160px rgba(222, 219, 200, 0.06));
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (hover: none) and (pointer: coarse) {

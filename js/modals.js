@@ -100,14 +100,6 @@ function renderPortfolio() {
           `).join('')}
         </div>
       </div>
-      <div class="demo-section">
-        <h3 class="demo-section-title">Hero Tagline</h3>
-        <div class="input-row">
-          <input type="text" id="taglineInput" class="demo-input"
-                 value="a web developer in nairobi driven by crafting striking and polished digital experiences">
-          <button id="applyTagline" class="demo-btn">Update</button>
-        </div>
-      </div>
       <div class="demo-stats">
         <div class="stats-block">
           <span class="stats-num" id="viewCount">${views}</span>
@@ -122,25 +114,12 @@ function renderPortfolio() {
     btn.addEventListener('click', () => {
       body.querySelectorAll('.swatch-btn').forEach(s => s.classList.remove('active'));
       btn.classList.add('active');
-      document.documentElement.style.setProperty('--color-primary', btn.dataset.color);
-      document.documentElement.style.setProperty('--color-primary-hover', btn.dataset.hover);
-      document.documentElement.style.setProperty('--gradient-btn', `linear-gradient(135deg, ${btn.dataset.color}, #7621b0)`);
+      const color = btn.dataset.color;
+      const hover = btn.dataset.hover;
+      document.documentElement.style.setProperty('--color-primary', color);
+      document.documentElement.style.setProperty('--color-primary-hover', hover);
+      document.documentElement.style.setProperty('--gradient-btn', `linear-gradient(135deg, ${color}, ${hover})`);
     });
-  });
-
-  body.querySelector('#applyTagline').addEventListener('click', () => {
-    const val = body.querySelector('#taglineInput').value.trim();
-    if (!val) return;
-    const tagline = document.querySelector('.hero-tagline');
-    if (!tagline) return;
-    const textNode = document.createTextNode(val + ' ');
-    tagline.textContent = '';
-    tagline.appendChild(textNode);
-    const cursor = document.createElement('span');
-    cursor.className = 'typing-cursor';
-    cursor.textContent = '|';
-    tagline.appendChild(cursor);
-    setTimeout(() => { if (cursor.parentNode) cursor.remove(); }, 4000);
   });
 
   body.querySelector('#boostViews').addEventListener('click', () => {
