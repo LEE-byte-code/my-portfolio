@@ -156,6 +156,18 @@ section[id] {
   filter: drop-shadow(0 0 60px rgba(222, 219, 200, 0.08)) drop-shadow(0 0 120px rgba(222, 219, 200, 0.04));
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .hero-heading,
+  .section-heading {
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    color: #E1E0CC;
+    filter: none;
+  }
+}
+
 .section-heading {
   background: var(--gradient-text);
   -webkit-background-clip: text;
