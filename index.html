@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leon Mwangi | Web Developer</title>
-  <meta name="description" content="Portfolio website for Leon Mwangi, a web developer in Nairobi building responsive, accessible websites.">
-  <meta property="og:title" content="Leon Mwangi | Web Developer">
-  <meta property="og:description" content="Web developer in Nairobi building clean, responsive websites with strong structure and polished interfaces.">
+  <title>Leon Mwangi | Frontend Web Developer in Nairobi</title>
+  <meta name="description" content="Frontend web developer based in Nairobi, Kenya. I build responsive, accessible, and performant websites with HTML, CSS, JavaScript, and modern frontend tools.">
+  <meta property="og:title" content="Leon Mwangi | Frontend Web Developer">
+  <meta property="og:description" content="Frontend web developer in Nairobi building responsive, accessible websites with clean code and thoughtful design.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://leonmwangi.dev">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Leon Mwangi | Web Developer">
-  <meta name="twitter:description" content="Web developer in Nairobi building clean, responsive websites.">
+  <meta name="twitter:title" content="Leon Mwangi | Frontend Web Developer">
+  <meta name="twitter:description" content="Frontend web developer in Nairobi building responsive, accessible websites.">
   <meta name="twitter:site" content="@leonmwangi">
+  <meta property="og:image" content="https://leonmwangi.dev/og-image.png">
+  <meta name="twitter:image" content="https://leonmwangi.dev/og-image.png">
+  <link rel="canonical" href="https://leonmwangi.dev">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Leon Mwangi",
+    "url": "https://leonmwangi.dev",
+    "jobTitle": "Web Developer",
+    "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Git"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/playground.css">
@@ -54,12 +72,14 @@
           <div class="noise-overlay"></div>
           <div class="hero-heading-wrap">
             <h1 class="hero-heading">Leon<br>Mwangi</h1>
+            <p class="hero-tagline">Frontend Web Developer</p>
             <div class="hero-status">
               <span class="status-dot"></span>
               <span class="status-text">Available for projects</span>
             </div>
           </div>
           <div class="hero-bottom">
+            <a href="#projects" class="btn-ghost-hero">View Work</a>
             <a href="#contact" class="btn-contact">Contact Me</a>
           </div>
 
@@ -81,7 +101,7 @@
             </div>
             <div class="about-content" data-reveal>
               <p class="about-text" data-animate-letters>
-                I am growing through hands-on projects and building a strong foundation in frontend development. My goal is to become a full-stack developer who can design, build, and ship useful web applications.
+                I build responsive, accessible websites with clean code and thoughtful design. Based in Nairobi, I focus on frontend development — turning design concepts into functional, performant web experiences. Every project I ship teaches me something new, and I bring that growth to every next build.
               </p>
               <div class="about-editor">
                 <div class="code-editor-card">
@@ -147,33 +167,33 @@
             <div class="skills-grid" data-stagger="0.08">
               <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon">&#x1F3D7;&#xFE0F;</span>
+                  <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-code"/></svg>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">HTML5</h4>
-                <p class="skill-desc">Semantic structure, SEO foundations, accessibility standards, and clean page layouts.</p>
+                <p class="skill-desc">Semantic markup, accessible page structures, SEO-friendly content hierarchy, and clean, maintainable code.</p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar" data-width="90"></div>
                 </div>
               </article>
               <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon">&#x1F4D0;</span>
+                  <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-brush"/></svg>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">CSS3</h4>
-                <p class="skill-desc">Responsive grids, flexbox layouts, animations, transitions, and modern spacing systems.</p>
+                <p class="skill-desc">Responsive layouts with Grid and Flexbox, custom properties, animations, transitions, and modern styling techniques.</p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar" data-width="85"></div>
                 </div>
               </article>
               <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon">&#x2699;&#xFE0F;</span>
+                  <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gear"/></svg>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">JavaScript</h4>
-                <p class="skill-desc">DOM manipulation, event handling, ES6 syntax, dynamic data integration, and scripting.</p>
+                <p class="skill-desc">DOM manipulation, event handling, ES6+, async patterns, and building interactive UI components from scratch.</p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar" data-width="75"></div>
                 </div>
@@ -185,11 +205,11 @@
             <div class="skills-grid" data-stagger="0.08">
               <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon">&#x26D3;&#xFE0F;</span>
+                  <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-git-branch"/></svg>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">Git</h4>
-                <p class="skill-desc">Version control, branch management, local and remote repository synchronization.</p>
+                <p class="skill-desc">Version control, branching, collaboration workflows, and managing projects with GitHub.</p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar" data-width="80"></div>
                 </div>
@@ -197,22 +217,22 @@
 
               <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon">&#x1F4DF;</span>
+                  <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-devices"/></svg>
                   <span class="skill-pill advanced">Advanced</span>
                 </div>
                 <h4 class="skill-name">Responsive Design</h4>
-                <p class="skill-desc">Mobile-first engineering, breakpoints, fluid spacing, and flexible layouts across screens.</p>
+                <p class="skill-desc">Mobile-first workflow, fluid layouts, breakpoint strategy, and cross-device testing.</p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar" data-width="85"></div>
                 </div>
               </article>
               <article class="skill-card glass-card">
                 <div class="skill-header">
-                  <span class="skill-icon">&#x1F527;</span>
+                  <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wrench"/></svg>
                   <span class="skill-pill intermediate">Intermediate</span>
                 </div>
                 <h4 class="skill-name">Chrome DevTools</h4>
-                <p class="skill-desc">Inspecting layouts, debugging javascript, styling overrides, and testing performance.</p>
+                <p class="skill-desc">Layout inspection, performance profiling, debugging, and CSS/JS debugging workflows.</p>
                 <div class="skill-progress-bg">
                   <div class="skill-progress-bar" data-width="70"></div>
                 </div>
@@ -237,63 +257,9 @@
           <p class="section-subtitle">Recent work built with focus, clarity, and a growing frontend toolkit.</p>
           <div class="projects-grid" data-stagger="0.12">
             <article class="project-card glass-card" data-reveal>
-              <span class="project-badge">Featured</span>
-              <div class="project-thumb theme-portfolio">
-                <span class="project-thumb-icon">&#x1F3D7;&#xFE0F;</span>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">HTML5</span>
-                  <span class="project-tag">CSS3</span>
-                  <span class="project-tag">JavaScript</span>
-                </div>
-                <h3 class="project-name">Personal Portfolio Website</h3>
-                <p class="project-desc">A fully responsive, modern developer portfolio with high-performance scroll transitions, typing animations, mobile navigation, and a dynamic contact form.</p>
-                <div class="project-actions">
-                  <button type="button" class="btn btn-live" data-project="portfolio">Interactive Demo</button>
-                  <a href="https://github.com/leonmwangi/portfolio" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
-                </div>
-              </div>
-            </article>
-            <article class="project-card glass-card" data-reveal>
-              <div class="project-thumb theme-tasks">
-                <span class="project-thumb-icon">&#x2699;&#xFE0F;</span>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">JavaScript</span>
-                  <span class="project-tag">LocalStorage</span>
-                  <span class="project-tag">CSS Grid</span>
-                </div>
-                <h3 class="project-name">Taskly - Kanban Dashboard</h3>
-                <p class="project-desc">A lightweight productivity dashboard for managing projects with local persistence, task sorting, priority labelling, and deadline countdowns.</p>
-                <div class="project-actions">
-                  <button type="button" class="btn btn-live" data-project="taskly">Interactive Demo</button>
-                  <a href="https://github.com/leonmwangi/taskly" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
-                </div>
-              </div>
-            </article>
-            <article class="project-card glass-card" data-reveal>
-              <div class="project-thumb theme-weather">
-                <span class="project-thumb-icon">&#x1F4E1;</span>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">API</span>
-                  <span class="project-tag">JavaScript</span>
-                  <span class="project-tag">CSS Flexbox</span>
-                </div>
-                <h3 class="project-name">Weatherly - Forecast Portal</h3>
-                <p class="project-desc">An interactive weather application with real-time data, forecast charts, city search, and dynamic card layouts.</p>
-                <div class="project-actions">
-                  <button type="button" class="btn btn-live" data-project="weatherly">Interactive Demo</button>
-                  <a href="https://github.com/leonmwangi/weatherly" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
-                </div>
-              </div>
-            </article>
-            <article class="project-card glass-card" data-reveal>
+              <span class="project-badge">Showcase</span>
               <div class="project-thumb theme-plum">
-                <span class="project-thumb-icon">&#x1F37D;&#xFE0F;</span>
+                <svg class="project-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-restaurant"/></svg>
               </div>
               <div class="project-content">
                 <div class="project-tags">
@@ -303,9 +269,64 @@
                   <span class="project-tag">REST API</span>
                 </div>
                 <h3 class="project-name">The Gilded Plum</h3>
-                <p class="project-desc">A full-stack fine dining restaurant website with Django backend, reservation management, dynamic menu API, and interactive gallery.</p>
+                <p class="project-desc">Full-stack restaurant website with a Django backend, SQLite database, and REST API for menu and reservations. My first project integrating a backend framework with a frontend interface.</p>
                 <div class="project-actions">
                   <a href="https://github.com/leonmwangi/the-gilded-plum" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card glass-card" data-reveal>
+              <span class="project-badge">Featured</span>
+              <div class="project-thumb theme-portfolio">
+                <svg class="project-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-code"/></svg>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">HTML5</span>
+                  <span class="project-tag">CSS3</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+                <h3 class="project-name">Personal Portfolio Website</h3>
+                <p class="project-desc">Responsive single-page portfolio built from scratch with semantic HTML, CSS animations, and vanilla JavaScript. Features glassmorphism design, scroll-triggered reveals, a custom parallax background, and interactive project demos.</p>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-live" data-project="portfolio">Interactive Demo</button>
+                  <a href="https://github.com/leonmwangi/portfolio" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card glass-card" data-reveal>
+              <div class="project-thumb theme-tasks">
+                <svg class="project-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gear"/></svg>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">LocalStorage</span>
+                  <span class="project-tag">CSS Grid</span>
+                </div>
+                <h3 class="project-name">Taskly - Kanban Dashboard</h3>
+                <p class="project-desc">Browser-based Kanban board with drag-to-move task management, localStorage persistence, and responsive three-column layout. Built to practice JavaScript state management and DOM manipulation.</p>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-live" data-project="taskly">Interactive Demo</button>
+                  <a href="https://github.com/leonmwangi/taskly" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card glass-card" data-reveal>
+              <div class="project-thumb theme-weather">
+                <svg class="project-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloud"/></svg>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">API</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">CSS Flexbox</span>
+                </div>
+                <h3 class="project-name">Weatherly - Forecast Portal</h3>
+                <p class="project-desc">Interactive weather dashboard with city search, simulated forecast data, animated bar charts, and dynamic card UI. Demonstrates async data patterns, loading states, and responsive data visualization.</p>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-live" data-project="weatherly">Interactive Demo</button>
+                  <a href="https://github.com/leonmwangi/weatherly" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
             </article>
@@ -314,7 +335,8 @@
         <div class="code-decor code-decor--projects" data-reveal aria-hidden="true">git push origin
   feat/portfolio
   feat/taskly
-  feat/weatherly</div>
+  feat/weatherly
+  feat/gilded-plum</div>
       </section>
 
       <!-- CONTACT -->
@@ -328,21 +350,27 @@
               <p class="contact-desc">I am open to internships, collaborations, freelance projects, and conversations about building better websites.</p>
               <ul class="contact-details">
                 <li class="contact-detail-item">
-                  <span class="contact-detail-icon">&#x1F4CD;</span>
+                  <span class="contact-detail-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-map-pin"/></svg>
+                  </span>
                   <div>
                     <span class="contact-detail-label">Location</span>
                     <span class="contact-detail-value">Nairobi, Kenya</span>
                   </div>
                 </li>
                 <li class="contact-detail-item">
-                  <span class="contact-detail-icon">&#x1F4E9;</span>
+                  <span class="contact-detail-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-envelope"/></svg>
+                  </span>
                   <div>
                     <span class="contact-detail-label">Email</span>
                     <a href="mailto:leonmwangi595@gmail.com" class="contact-detail-value link">leonmwangi595@gmail.com</a>
                   </div>
                 </li>
                 <li class="contact-detail-item">
-                  <span class="contact-detail-icon">&#x1F680;</span>
+                  <span class="contact-detail-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-rocket"/></svg>
+                  </span>
                   <div>
                     <span class="contact-detail-label">Response</span>
                     <span class="contact-detail-value">Within 24 hours</span>
@@ -411,11 +439,70 @@ subject:
   </div>
 
   <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
-  <script src="js/utils.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/modals.js"></script>
-  <script src="js/background-anim.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/utils.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/modals.js" defer></script>
+  <script src="js/background-anim.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </symbol>
+      <symbol id="icon-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 15l-4 4c-.69.69-.81 1.88-.28 2.71"/>
+        <path d="M15 9l4-4c.69-.69.81-1.88.28-2.71"/>
+        <path d="M9 15c-2-1-4-3-4-6 0-4 4-6 8-6s8 2 8 6c0 3-2 5-4 6"/>
+        <path d="M9 15c1 2 3 3 6 3"/>
+      </symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </symbol>
+      <symbol id="icon-git-branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="3" x2="6" y2="15"/>
+        <circle cx="18" cy="6" r="3"/>
+        <circle cx="6" cy="18" r="3"/>
+        <path d="M18 9c0 4-3 6-6 6"/>
+      </symbol>
+      <symbol id="icon-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="14" height="10" rx="2"/>
+        <line x1="9" y1="13" x2="9" y2="21"/>
+        <line x1="5" y1="21" x2="13" y2="21"/>
+        <rect x="17" y="7" width="5" height="14" rx="1"/>
+      </symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94"/>
+        <path d="M9.4 4.6c-.3-.3-.6-.8-.6-1.4a1.97 1.97 0 0 1 .4-1.2"/>
+        <line x1="1" y1="20" x2="8" y2="13"/>
+        <line x1="4" y1="23" x2="11" y2="16"/>
+      </symbol>
+      <symbol id="icon-restaurant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2v5a3 3 0 0 0 6 0V2"/>
+        <path d="M12 2v5a3 3 0 0 0 6 0V2"/>
+        <line x1="9" y1="9" x2="9" y2="22"/>
+        <line x1="15" y1="9" x2="15" y2="22"/>
+      </symbol>
+      <symbol id="icon-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </symbol>
+      <symbol id="icon-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="M22 5l-10 7L2 5"/>
+      </symbol>
+      <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+        <path d="M9 12H4s.55-3.03 2-4c.93-.63 2.16-.91 3-.88"/>
+        <path d="M12 15v5s3.03-.55 4-2c.63-.93.91-2.16.88-3"/>
+      </symbol>
+    </defs>
+  </svg>
 </body>
 </html>

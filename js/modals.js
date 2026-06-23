@@ -77,7 +77,6 @@ function renderPortfolio() {
   if (!title || !body) return;
   title.textContent = 'Portfolio Customizer';
 
-  let views = parseInt(localStorage.getItem('simulated_views') || '1428');
   const accentColors = [
     { name: 'Cream', color: '#DEDBC8', hover: '#c5c2a8' },
     { name: 'Purple', color: '#B600A8', hover: '#95008a' },
@@ -100,13 +99,6 @@ function renderPortfolio() {
           `).join('')}
         </div>
       </div>
-      <div class="demo-stats">
-        <div class="stats-block">
-          <span class="stats-num" id="viewCount">${views}</span>
-          <span class="stats-label">Live Visitors</span>
-        </div>
-        <button id="boostViews" class="demo-btn">+ Boost</button>
-      </div>
     </div>
   `;
 
@@ -120,12 +112,6 @@ function renderPortfolio() {
       document.documentElement.style.setProperty('--color-primary-hover', hover);
       document.documentElement.style.setProperty('--gradient-btn', `linear-gradient(135deg, ${color}, ${hover})`);
     });
-  });
-
-  body.querySelector('#boostViews').addEventListener('click', () => {
-    views += Math.floor(Math.random() * 25) + 5;
-    localStorage.setItem('simulated_views', views.toString());
-    body.querySelector('#viewCount').textContent = views;
   });
 }
 
@@ -300,6 +286,7 @@ function renderWeather() {
             <input type="text" id="cityInput" class="demo-input" value="${esc(data.name)}" placeholder="Search city...">
             <button id="searchCity" class="demo-btn">Search</button>
           </div>
+          <p style="font-size:0.7rem;opacity:0.5;text-align:center;margin:0;">Simulated data &mdash; not real-time</p>
           <div class="weather-card">
             <div class="weather-main">
               <div>

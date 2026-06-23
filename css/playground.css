@@ -54,7 +54,7 @@
 
 .demo-btn {
   background: var(--gradient-btn);
-  color: #fff;
+  color: #000;
   border: none;
   border-radius: 8px;
   padding: 0.65rem 1.25rem;

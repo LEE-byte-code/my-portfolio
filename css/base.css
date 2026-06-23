@@ -19,7 +19,7 @@
   --color-primary-hover: #c5c2a8;
   --color-accent-orange: #ff6b4a;
   --color-accent-yellow: #f2b84b;
-  --gradient-btn: linear-gradient(135deg, #b501a7, #7621b0);
+  --gradient-btn: linear-gradient(135deg, #DEDBC8, #c5c2a8);
 }
 
 *, *::before, *::after {
@@ -228,10 +228,6 @@ section[id] {
 }
 
 /* ---- CUSTOM CURSOR ---- */
-body {
-  cursor: none;
-}
-
 .cursor-dot {
   position: fixed;
   top: 0;
@@ -243,6 +239,7 @@ body {
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .cursor-ring {
@@ -257,22 +254,12 @@ body {
   z-index: 99998;
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, border-color 0.2s;
+  display: none;
 }
 
-a:hover ~ .cursor-ring,
-button:hover ~ .cursor-ring,
-.cursor-ring.hover {
-  width: 44px;
-  height: 44px;
-  border-color: rgba(222, 219, 200, 0.6);
-}
-
-@media (hover: none) and (pointer: coarse) {
-  body {
-    cursor: auto;
-  }
+@media (hover: hover) and (pointer: fine) {
   .cursor-dot,
   .cursor-ring {
-    display: none;
+    display: block;
   }
 }
