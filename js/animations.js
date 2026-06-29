@@ -31,26 +31,6 @@ function initScrollReveal() {
   });
 }
 
-function initSkillBars() {
-  const bars = document.querySelectorAll('.skill-progress-bar');
-  const section = document.getElementById('skills');
-  if (!bars.length || !section) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        bars.forEach((bar, i) => {
-          const w = bar.getAttribute('data-width') || '0';
-          setTimeout(() => { bar.style.width = `${w}%`; }, i * 150);
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  observer.observe(section);
-}
-
 function initAnimatedLetters() {
   const el = document.querySelector('[data-animate-letters]');
   if (!el) return;

@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollReveal();
   initActiveNav();
-  initSkillBars();
   initBackToTop();
   initProjectModals();
   initContactForm();
